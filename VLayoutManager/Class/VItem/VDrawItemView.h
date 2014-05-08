@@ -10,5 +10,8 @@
 
 @interface VDrawItemView : VDrawItem
 @property (nonatomic, strong)  UIColor *backgroundColor;
-
+@property (nonatomic)BOOL isFill;
+@property (nonatomic)CGFloat cornerRadius;
+@property (nonatomic)CGFloat strokeLineWidth;
+@property (nonatomic, strong)UIColor *strokeLineColor;
 @end

@@ -58,15 +58,26 @@ BOOL CGRectIsInvalid( CGRect r ){
             if (imageItem.image) {
                 [imageItem.image drawInRect:imageItem.rect];
             }else{
-                UIImage *image = PDImage(imageItem.imageName);
+                UIImage *image = [UIImage imageNamed:imageItem.imageName];
                 [image drawInRect:imageItem.rect];
             }
-//            [image drawAtPoint:imageItem.rect.origin];
         }else if([item isKindOfClass:[VDrawItemView class]]){
             VDrawItemView *viewItem = (VDrawItemView *)item;
             CGContextSetFillColorWithColor(context,viewItem.backgroundColor.CGColor);
-            CGContextAddRect(context,item.rect);
-            CGContextFillPath(context);
+            if (viewItem.cornerRadius >0 ||  viewItem.isFill || viewItem.strokeLineWidth>0) {
+                UIBezierPath *bezierPath = [UIBezierPath bezierPathWithRoundedRect:viewItem.rect cornerRadius:viewItem.cornerRadius];
+                if (viewItem.isFill){
+                    [bezierPath fill];
+                }
+                if (viewItem.strokeLineWidth>0) {
+                    CGContextSetLineWidth(context, viewItem.strokeLineWidth);
+                    CGContextSetStrokeColorWithColor(context, viewItem.strokeLineColor.CGColor);
+                    [bezierPath stroke];
+                }
+            }else{
+                CGContextAddRect(context,item.rect);
+                CGContextFillPath(context);
+            }
         }
     }
 }
