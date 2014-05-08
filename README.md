@@ -3,7 +3,7 @@ PodsRepertory
 
 存放Cocoapods中常用类库文件
 
-使用方法: 将Podspecs下的所有文件夹拷贝到`.cocoapods/repos/master/`目录下，后面就能直接pod search对应的类库了
+使用方法: 将Podspecs下的所有文件夹拷贝到`.cocoapods/repos/master/`目录下，后面就能直接`pod search`对应的类库了,e.g:`pod search VLayoutManager`
 
 XCODE项目里Podfile文件引用
 
