@@ -1,9 +1,9 @@
 PodsRepertory
 =============
 
-存放Cocoapods中常用类库文件,统一用V开头
+存放Cocoapods中常用类库文件,为了和cocoapods上区分，spec统一用V开头
 
-使用方法: 将Podspecs下的所有文件夹拷贝到`.cocoapods/repos/master/`目录下，后面就能直接`pod search`对应的类库了,e.g:`pod search VLayoutManager`
+使用方法: `git clone`完后进入目录，执行`sh INSTALL`，后面就能直接`pod search`对应的类库了,e.g:`pod search VLayoutManager`
 
 XCODE项目里Podfile文件引用
 
