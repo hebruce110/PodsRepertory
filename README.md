@@ -1,7 +1,7 @@
 PodsRepertory
 =============
 
-存放Cocoapods中常用类库文件
+存放Cocoapods中常用类库文件,统一用V开头
 
 使用方法: 将Podspecs下的所有文件夹拷贝到`.cocoapods/repos/master/`目录下，后面就能直接`pod search`对应的类库了,e.g:`pod search VLayoutManager`
 
@@ -23,3 +23,8 @@ pod 'VLayoutManager'
 ####VLayoutManager
 
 * 用来布局使用,配合item信息，来draw
+
+####VAESCrypt
+
+* Objective C AESCrypt 加密
+
