@@ -1,0 +1,13 @@
+#! bin/bash
+export LC_ALL=zh_CN.GB2312;export LANG=zh_CN.GB2312
+toPath=~/.cocoapods/repos/master/
+if [ -d "$toPath" ]; then
+	echo "${toPath}目录存在"
+else 
+	mkdir -p $toPath
+	echo "创建${toPath}目录成功"
+fi
+echo "正在安装..."
+cp -r -i ./Podspecs/* $toPath
+ls -l Podspecs | grep '^d' | awk '{ print $9 }'
+echo "安装完成，用pod search搜索上面安装成功的库试试~_~！"
