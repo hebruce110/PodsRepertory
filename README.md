@@ -3,7 +3,13 @@ PodsRepertory
 
 存放Cocoapods中常用类库文件,为了和cocoapods上区分，spec统一用V开头
 
-使用方法: 打开终端执行`curl -L  https://raw.githubusercontent.com/heyuan110/PodsRepertory/master/INSTALL | sh`，后面就能直接`pod search`对应的类库了,e.g:`pod search VLayoutManager`
+安装方法: 
+
+打开终端执行
+
+`curl -L  https://raw.githubusercontent.com/heyuan110/PodsRepertory/master/INSTALL | sh`
+
+后面就能直接`pod search`对应的类库了,e.g:`pod search VLayoutManager`
 
 XCODE项目里Podfile文件引用
 
