@@ -27,4 +27,5 @@ fi
 echo "正在安装..."
 cp -rf ~/.PodsRepertory/Podspecs/* $toPath
 ls -l ~/.PodsRepertory/Podspecs | grep '^d' | awk '{ print $9 }'
+rm -rf ~/.PodsRepertory
 echo "安装完成，用pod search搜索上面安装成功的库试试~_~！"
