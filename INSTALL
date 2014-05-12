@@ -1,4 +1,7 @@
 #! bin/bash
+
+set -e
+
 export LC_ALL=zh_CN.GB2312;export LANG=zh_CN.GB2312
 
 if [ -d ~/.PodsRepertory ]
