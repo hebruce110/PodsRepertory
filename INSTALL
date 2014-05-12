@@ -21,6 +21,6 @@ else
 	echo "创建${toPath}目录成功"
 fi
 echo "正在安装..."
-cp -r -i ~/.PodsRepertory/Podspecs/* $toPath
+cp -rf ~/.PodsRepertory/Podspecs/* $toPath
 ls -l ~/.PodsRepertory/Podspecs | grep '^d' | awk '{ print $9 }'
 echo "安装完成，用pod search搜索上面安装成功的库试试~_~！"
