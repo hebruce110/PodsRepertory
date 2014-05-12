@@ -1,5 +1,6 @@
 #! bin/bash
 
+#:显示(设置)shell变量
 set -e
 
 export LC_ALL=zh_CN.GB2312;export LANG=zh_CN.GB2312
