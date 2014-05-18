@@ -34,3 +34,7 @@ pod 'VLayoutManager'
 
 * Objective C AESCrypt 加密
 
+####VPickImage
+
+* 快速从相机和相册选择图片
+
