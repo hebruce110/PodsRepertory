@@ -10,6 +10,46 @@
 
 @implementation UIImage (UIImage_Extensions)
 
+//resize图片
+- (UIImage*)resizedImage:(CGRect)rect
+{
+    UIGraphicsBeginImageContext(rect.size);
+    [self drawInRect:CGRectMake(0, 0, rect.size.width, rect.size.height)];
+    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return reSizeImage;
+}
+
+//创建缩略图
+- (UIImage *)createThumbImage:(CGSize)maxThumbSize
+{
+    CGSize imageSize = self.size;// The image size, for example {1024,768}
+    CGFloat thumbAspectRatio = maxThumbSize.width / maxThumbSize.height;
+    CGFloat imageAspectRatio = imageSize.width / imageSize.height;
+    CGRect rect = CGRectZero;
+    if ( imageAspectRatio == thumbAspectRatio ){
+        rect.size = maxThumbSize;
+        // The aspect ratio is equal
+        // Resize image to maxThumbSize
+    }else if ( imageAspectRatio > thumbAspectRatio ){
+        // The image is wider
+        // Thumbnail width: maxThumbSize.width
+        // Thumbnail height: maxThumbSize.height / imageAspectRatio
+        rect.size.width = maxThumbSize.width;
+        rect.size.height = maxThumbSize.height/imageAspectRatio;
+    }
+    else if ( imageAspectRatio < thumbAspectRatio ){
+        // The image is taller
+        // Thumbnail width: maxThumbSize.width * imageAspectRatio
+        // Thumbnail height: maxThumbSize.height
+        rect.size.width = maxThumbSize.width*imageAspectRatio;
+        rect.size.height = maxThumbSize.height;
+    }
+    UIImage *thumbnailImage =[self resizedImage:rect];
+    return thumbnailImage;
+}
+
+
 - (UIImage *)imageByResizingToSize:(CGSize)size {
     UIGraphicsBeginImageContextWithOptions(size, NO, .0);
     [self drawInRect:CGRectMake(.0, .0, size.width, size.height)];

@@ -10,6 +10,24 @@
 
 @interface UIImage (UIImage_Extensions)
 
+/**
+ *  重画图片
+ *
+ *  @param rect 重画的图片大小
+ *
+ *  @return 图片
+ */
+- (UIImage*)resizedImage:(CGRect)rect;
+
+/**
+ *  创建图片的缩略图
+ *
+ *  @param maxThumbSize 缩略图大小
+ *
+ *  @return 缩略图
+ */
+- (UIImage *)createThumbImage:(CGSize)maxThumbSize;
+
 /*!
  *  @brief Resized image by given size.
  *  @param size The size to resize.
