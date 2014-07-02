@@ -7,12 +7,12 @@ export LC_ALL=zh_CN.GB2312;export LANG=zh_CN.GB2312
 
 if [ -d ~/.VPodsRepertory ]
 then
-  echo "您已经安装了PodsRepertory，如果你要安装请先删除~/.VPodsRepertory "
+  echo "您已经安装了VPodsRepertory，如果你要安装请先删除~/.VPodsRepertory "
   exit
 fi
 
-echo "Cloning PodsRepertory..."
-hash git >/dev/null && /usr/bin/env git clone http://code.fullteem.com/ios/PodsRepertory.git ~/.VPodsRepertory || {
+echo "Cloning VPodsRepertory..."
+hash git >/dev/null && /usr/bin/env git clone https://github.com/heyuan110/PodsRepertory.git ~/.VPodsRepertory || {
   echo "git not installed"
   exit
 }

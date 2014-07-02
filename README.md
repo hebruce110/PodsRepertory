@@ -7,7 +7,7 @@ PodsRepertory
 
 打开终端执行
 
-`curl -L  http://code.fullteem.com/ios/PodsRepertory/raw/master/INSTALL | sh`
+`curl -L  https://raw.githubusercontent.com/heyuan110/PodsRepertory/master/INSTALL | sh`
 
 搞定!
 

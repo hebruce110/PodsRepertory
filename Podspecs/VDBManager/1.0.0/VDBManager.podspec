@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "Yuan" => "http://www.heyuan110.com" }
   s.social_media_url   = "http://weibo.com/heyuan110"
   s.platform     = :ios, "5.0"
-  s.source       = { :git => 'http://code.fullteem.com/ios/PodsRepertory.git' }
+  s.source       = { :git => 'https://github.com/heyuan110/PodsRepertory.git' }
   s.source_files  = "Source/VDBManager/*.{h,m}"
 # s.frameworks = "MapKit", "CoreLocation"
 #  s.libraries = "libsqlite3"
