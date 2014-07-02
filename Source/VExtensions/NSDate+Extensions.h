@@ -16,6 +16,11 @@
 
 @interface NSDate (NSDate_Extensions)
 
+- (NSString *)formatMD;
+- (NSString *)formatYM;
+- (NSString *)formatYMD;
+- (NSString *)formatYMDHMS;
+- (NSString *)formatHM;
 - (NSString *)format;
 - (NSString *)formatWithStyle:(NSString *)style;
 
@@ -32,6 +37,9 @@
 + (NSDate *)translateStrToFullDate:(NSString *)strDate;
 + (NSDate *)translateStrToFullDateWithShorttime:(NSString *)strDate;
 + (NSDate *)translateStrDateToDate:(NSString *)strDate;
+
+//今天到月末还有的天数
++ (NSInteger)nowToMonthLastDay;
 
 // Comparing dates
 - (BOOL) isEqualToDateIgnoringTime: (NSDate *) aDate;
@@ -76,7 +84,6 @@
 - (NSInteger)distanceInDaysToDate:(NSDate *)anotherDate;
 
 - (NSDate *) monthDateFromDate;
-
 - (NSDate *) monthDayDateFromDate;
 
 // Decomposing dates
@@ -90,4 +97,5 @@
 @property (readonly) NSInteger weekday;
 @property (readonly) NSInteger nthWeekday; // e.g. 2nd Tuesday of the month == 2
 @property (readonly) NSInteger year;
+
 @end

@@ -34,6 +34,31 @@
     return [self formatWithStyle:@"yyyy-MM-dd HH:mm"];
 }
 
+- (NSString *)formatYMDHMS
+{
+    return [self formatWithStyle:@"yyyy-MM-dd HH:mm:ss"];
+}
+
+- (NSString *)formatYMD
+{
+    return [self formatWithStyle:@"yyyy-MM-dd"];
+}
+
+- (NSString *)formatYM
+{
+    return [self formatWithStyle:@"yyyy-MM"];
+}
+
+- (NSString *)formatMD
+{
+    return [self formatWithStyle:@"MM-dd"];
+}
+
+- (NSString *)formatHM
+{
+    return [self formatWithStyle:@"HH:mm"];
+}
+
 #pragma mark Relative Dates
 
 + (NSDate *) dateWithDaysFromNow: (NSInteger) days
@@ -371,6 +396,7 @@
 	return components.week;
 }
 
+//  Sunday:1, Monday:2, Tuesday:3, Wednesday:4, Friday:5, Saturday:6
 - (NSInteger) weekday
 {
 	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
@@ -442,5 +468,20 @@
     NSDate *localeDate = [date  dateByAddingTimeInterval: interval];
     return localeDate;
 }
+
+//今天到月末还有多少天
++ (NSInteger)nowToMonthLastDay
+{
+    NSCalendar *gregorian = [[NSCalendar alloc]initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDate* date = [NSDate date];
+    unsigned unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit;
+    NSDateComponents *components = [gregorian components:unitFlags fromDate:date];
+    NSRange range = [gregorian rangeOfUnit:NSDayCalendarUnit inUnit:NSMonthCalendarUnit forDate:date];
+    NSUInteger numberOfDaysInMonth = range.length;
+    NSUInteger day=components.day;
+    return numberOfDaysInMonth-day;
+}
+
+
 
 @end
