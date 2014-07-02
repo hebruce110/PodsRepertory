@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F79364E41940CECD00A8D0C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364E31940CECD00A8D0C9 /* Foundation.framework */; };
+		F79364F21940CECD00A8D0C9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364F11940CECD00A8D0C9 /* XCTest.framework */; };
+		F79364F31940CECD00A8D0C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364E31940CECD00A8D0C9 /* Foundation.framework */; };
+		F79364F51940CECD00A8D0C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364F41940CECD00A8D0C9 /* UIKit.framework */; };
+		F79364F81940CECD00A8D0C9 /* libVDevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364E01940CECD00A8D0C9 /* libVDevice.a */; };
+		F79364FE1940CECD00A8D0C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F79364FC1940CECD00A8D0C9 /* InfoPlist.strings */; };
+		F79365001940CECD00A8D0C9 /* VDeviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F79364FF1940CECD00A8D0C9 /* VDeviceTests.m */; };
+		F79365161940CEDF00A8D0C9 /* VDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F793650B1940CEDF00A8D0C9 /* VDiskInfo.m */; };
+		F79365171940CEDF00A8D0C9 /* VJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = F793650D1940CEDF00A8D0C9 /* VJailbreakCheck.m */; };
+		F79365181940CEDF00A8D0C9 /* VLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = F793650F1940CEDF00A8D0C9 /* VLocalization.m */; };
+		F79365191940CEDF00A8D0C9 /* VMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F79365111940CEDF00A8D0C9 /* VMemoryInfo.m */; };
+		F793651A1940CEDF00A8D0C9 /* VNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = F79365131940CEDF00A8D0C9 /* VNetwork.m */; };
+		F793651B1940CEDF00A8D0C9 /* VDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F79365151940CEDF00A8D0C9 /* VDevice.m */; };
+		F793651D1940E78200A8D0C9 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F793651C1940E78200A8D0C9 /* CoreTelephony.framework */; };
+		F793651F1940E78900A8D0C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F793651E1940E78900A8D0C9 /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F79364F61940CECD00A8D0C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F79364D81940CECD00A8D0C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F79364DF1940CECD00A8D0C9;
+			remoteInfo = VDevice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F79364DE1940CECD00A8D0C9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F79364E01940CECD00A8D0C9 /* libVDevice.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVDevice.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79364E31940CECD00A8D0C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F79364E71940CECD00A8D0C9 /* VDevice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VDevice-Prefix.pch"; sourceTree = "<group>"; };
+		F79364F01940CECD00A8D0C9 /* VDeviceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VDeviceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79364F11940CECD00A8D0C9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F79364F41940CECD00A8D0C9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F79364FB1940CECD00A8D0C9 /* VDeviceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VDeviceTests-Info.plist"; sourceTree = "<group>"; };
+		F79364FD1940CECD00A8D0C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F79364FF1940CECD00A8D0C9 /* VDeviceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VDeviceTests.m; sourceTree = "<group>"; };
+		F793650A1940CEDF00A8D0C9 /* VDiskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDiskInfo.h; sourceTree = "<group>"; };
+		F793650B1940CEDF00A8D0C9 /* VDiskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDiskInfo.m; sourceTree = "<group>"; };
+		F793650C1940CEDF00A8D0C9 /* VJailbreakCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJailbreakCheck.h; sourceTree = "<group>"; };
+		F793650D1940CEDF00A8D0C9 /* VJailbreakCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJailbreakCheck.m; sourceTree = "<group>"; };
+		F793650E1940CEDF00A8D0C9 /* VLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLocalization.h; sourceTree = "<group>"; };
+		F793650F1940CEDF00A8D0C9 /* VLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLocalization.m; sourceTree = "<group>"; };
+		F79365101940CEDF00A8D0C9 /* VMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMemoryInfo.h; sourceTree = "<group>"; };
+		F79365111940CEDF00A8D0C9 /* VMemoryInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMemoryInfo.m; sourceTree = "<group>"; };
+		F79365121940CEDF00A8D0C9 /* VNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VNetwork.h; sourceTree = "<group>"; };
+		F79365131940CEDF00A8D0C9 /* VNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VNetwork.m; sourceTree = "<group>"; };
+		F79365141940CEDF00A8D0C9 /* VDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VDevice.h; path = ../../../Source/VDevice/VDevice.h; sourceTree = "<group>"; };
+		F79365151940CEDF00A8D0C9 /* VDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VDevice.m; path = ../../../Source/VDevice/VDevice.m; sourceTree = "<group>"; };
+		F793651C1940E78200A8D0C9 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F793651E1940E78900A8D0C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F79364DD1940CECD00A8D0C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F793651F1940E78900A8D0C9 /* CoreGraphics.framework in Frameworks */,
+				F793651D1940E78200A8D0C9 /* CoreTelephony.framework in Frameworks */,
+				F79364E41940CECD00A8D0C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79364ED1940CECD00A8D0C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79364F81940CECD00A8D0C9 /* libVDevice.a in Frameworks */,
+				F79364F21940CECD00A8D0C9 /* XCTest.framework in Frameworks */,
+				F79364F51940CECD00A8D0C9 /* UIKit.framework in Frameworks */,
+				F79364F31940CECD00A8D0C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F79364D71940CECD00A8D0C9 = {
+			isa = PBXGroup;
+			children = (
+				F79364E51940CECD00A8D0C9 /* VDevice */,
+				F79364F91940CECD00A8D0C9 /* VDeviceTests */,
+				F79364E21940CECD00A8D0C9 /* Frameworks */,
+				F79364E11940CECD00A8D0C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F79364E11940CECD00A8D0C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F79364E01940CECD00A8D0C9 /* libVDevice.a */,
+				F79364F01940CECD00A8D0C9 /* VDeviceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F79364E21940CECD00A8D0C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F793651E1940E78900A8D0C9 /* CoreGraphics.framework */,
+				F793651C1940E78200A8D0C9 /* CoreTelephony.framework */,
+				F79364E31940CECD00A8D0C9 /* Foundation.framework */,
+				F79364F11940CECD00A8D0C9 /* XCTest.framework */,
+				F79364F41940CECD00A8D0C9 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F79364E51940CECD00A8D0C9 /* VDevice */ = {
+			isa = PBXGroup;
+			children = (
+				F79365091940CEDF00A8D0C9 /* Utilities */,
+				F79365141940CEDF00A8D0C9 /* VDevice.h */,
+				F79365151940CEDF00A8D0C9 /* VDevice.m */,
+				F79364E61940CECD00A8D0C9 /* Supporting Files */,
+			);
+			path = VDevice;
+			sourceTree = "<group>";
+		};
+		F79364E61940CECD00A8D0C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F79364E71940CECD00A8D0C9 /* VDevice-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F79364F91940CECD00A8D0C9 /* VDeviceTests */ = {
+			isa = PBXGroup;
+			children = (
+				F79364FF1940CECD00A8D0C9 /* VDeviceTests.m */,
+				F79364FA1940CECD00A8D0C9 /* Supporting Files */,
+			);
+			path = VDeviceTests;
+			sourceTree = "<group>";
+		};
+		F79364FA1940CECD00A8D0C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F79364FB1940CECD00A8D0C9 /* VDeviceTests-Info.plist */,
+				F79364FC1940CECD00A8D0C9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F79365091940CEDF00A8D0C9 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F793650A1940CEDF00A8D0C9 /* VDiskInfo.h */,
+				F793650B1940CEDF00A8D0C9 /* VDiskInfo.m */,
+				F793650C1940CEDF00A8D0C9 /* VJailbreakCheck.h */,
+				F793650D1940CEDF00A8D0C9 /* VJailbreakCheck.m */,
+				F793650E1940CEDF00A8D0C9 /* VLocalization.h */,
+				F793650F1940CEDF00A8D0C9 /* VLocalization.m */,
+				F79365101940CEDF00A8D0C9 /* VMemoryInfo.h */,
+				F79365111940CEDF00A8D0C9 /* VMemoryInfo.m */,
+				F79365121940CEDF00A8D0C9 /* VNetwork.h */,
+				F79365131940CEDF00A8D0C9 /* VNetwork.m */,
+			);
+			name = Utilities;
+			path = ../../../Source/VDevice/Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F79364DF1940CECD00A8D0C9 /* VDevice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F79365031940CECD00A8D0C9 /* Build configuration list for PBXNativeTarget "VDevice" */;
+			buildPhases = (
+				F79364DC1940CECD00A8D0C9 /* Sources */,
+				F79364DD1940CECD00A8D0C9 /* Frameworks */,
+				F79364DE1940CECD00A8D0C9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VDevice;
+			productName = VDevice;
+			productReference = F79364E01940CECD00A8D0C9 /* libVDevice.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F79364EF1940CECD00A8D0C9 /* VDeviceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F79365061940CECD00A8D0C9 /* Build configuration list for PBXNativeTarget "VDeviceTests" */;
+			buildPhases = (
+				F79364EC1940CECD00A8D0C9 /* Sources */,
+				F79364ED1940CECD00A8D0C9 /* Frameworks */,
+				F79364EE1940CECD00A8D0C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F79364F71940CECD00A8D0C9 /* PBXTargetDependency */,
+			);
+			name = VDeviceTests;
+			productName = VDeviceTests;
+			productReference = F79364F01940CECD00A8D0C9 /* VDeviceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F79364D81940CECD00A8D0C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = www.heyuan110.com;
+			};
+			buildConfigurationList = F79364DB1940CECD00A8D0C9 /* Build configuration list for PBXProject "VDevice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F79364D71940CECD00A8D0C9;
+			productRefGroup = F79364E11940CECD00A8D0C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F79364DF1940CECD00A8D0C9 /* VDevice */,
+				F79364EF1940CECD00A8D0C9 /* VDeviceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F79364EE1940CECD00A8D0C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79364FE1940CECD00A8D0C9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F79364DC1940CECD00A8D0C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79365181940CEDF00A8D0C9 /* VLocalization.m in Sources */,
+				F79365161940CEDF00A8D0C9 /* VDiskInfo.m in Sources */,
+				F79365191940CEDF00A8D0C9 /* VMemoryInfo.m in Sources */,
+				F793651B1940CEDF00A8D0C9 /* VDevice.m in Sources */,
+				F79365171940CEDF00A8D0C9 /* VJailbreakCheck.m in Sources */,
+				F793651A1940CEDF00A8D0C9 /* VNetwork.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79364EC1940CECD00A8D0C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79365001940CECD00A8D0C9 /* VDeviceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F79364F71940CECD00A8D0C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F79364DF1940CECD00A8D0C9 /* VDevice */;
+			targetProxy = F79364F61940CECD00A8D0C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F79364FC1940CECD00A8D0C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F79364FD1940CECD00A8D0C9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F79365011940CECD00A8D0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F79365021940CECD00A8D0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F79365041940CECD00A8D0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VDevice.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VDevice/VDevice-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F79365051940CECD00A8D0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VDevice.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VDevice/VDevice-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F79365071940CECD00A8D0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VDevice/VDevice-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VDeviceTests/VDeviceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F79365081940CECD00A8D0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VDevice/VDevice-Prefix.pch";
+				INFOPLIST_FILE = "VDeviceTests/VDeviceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F79364DB1940CECD00A8D0C9 /* Build configuration list for PBXProject "VDevice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79365011940CECD00A8D0C9 /* Debug */,
+				F79365021940CECD00A8D0C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F79365031940CECD00A8D0C9 /* Build configuration list for PBXNativeTarget "VDevice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79365041940CECD00A8D0C9 /* Debug */,
+				F79365051940CECD00A8D0C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F79365061940CECD00A8D0C9 /* Build configuration list for PBXNativeTarget "VDeviceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79365071940CECD00A8D0C9 /* Debug */,
+				F79365081940CECD00A8D0C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F79364D81940CECD00A8D0C9 /* Project object */;
+}

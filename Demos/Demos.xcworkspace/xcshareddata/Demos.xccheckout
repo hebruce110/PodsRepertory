@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4D2D104B-1FCB-486A-A467-CBDCD227862F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Demos</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C141D16A-F054-478F-BD01-DE860BC40578</key>
+		<string>http://code.fullteem.com/ios/PodsRepertory.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Demos/Demos.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C141D16A-F054-478F-BD01-DE860BC40578</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://code.fullteem.com/ios/PodsRepertory.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C141D16A-F054-478F-BD01-DE860BC40578</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C141D16A-F054-478F-BD01-DE860BC40578</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VPodsRepertory</string>
+		</dict>
+	</array>
+</dict>
+</plist>

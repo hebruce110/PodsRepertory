@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:VALMoviePlayerController/VALMoviePlayerController.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VDBManager/VDBManager.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VGPS/VGPS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VLayoutManager/VLayoutManager.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VPickImage/VPickImage.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VExtensions/VExtensions.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VDevice/VDevice.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:VFileManager/VFileManager.xcodeproj">
+   </FileRef>
+</Workspace>

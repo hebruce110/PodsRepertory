@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F79364AB1940CDFC00A8D0C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364AA1940CDFC00A8D0C9 /* Foundation.framework */; };
+		F79364B91940CDFD00A8D0C9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364B81940CDFD00A8D0C9 /* XCTest.framework */; };
+		F79364BA1940CDFD00A8D0C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364AA1940CDFC00A8D0C9 /* Foundation.framework */; };
+		F79364BC1940CDFD00A8D0C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364BB1940CDFD00A8D0C9 /* UIKit.framework */; };
+		F79364BF1940CDFD00A8D0C9 /* libVFileManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F79364A71940CDFC00A8D0C9 /* libVFileManager.a */; };
+		F79364C51940CDFD00A8D0C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F79364C31940CDFD00A8D0C9 /* InfoPlist.strings */; };
+		F79364C71940CDFD00A8D0C9 /* VFileManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F79364C61940CDFD00A8D0C9 /* VFileManagerTests.m */; };
+		F79364D61940CE5B00A8D0C9 /* VFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F79364D51940CE5B00A8D0C9 /* VFileManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F79364BD1940CDFD00A8D0C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F793649F1940CDFC00A8D0C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F79364A61940CDFC00A8D0C9;
+			remoteInfo = VFileManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F79364A51940CDFC00A8D0C9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F79364A71940CDFC00A8D0C9 /* libVFileManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVFileManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79364AA1940CDFC00A8D0C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F79364AE1940CDFC00A8D0C9 /* VFileManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VFileManager-Prefix.pch"; sourceTree = "<group>"; };
+		F79364B71940CDFD00A8D0C9 /* VFileManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VFileManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79364B81940CDFD00A8D0C9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F79364BB1940CDFD00A8D0C9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		F79364C21940CDFD00A8D0C9 /* VFileManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VFileManagerTests-Info.plist"; sourceTree = "<group>"; };
+		F79364C41940CDFD00A8D0C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F79364C61940CDFD00A8D0C9 /* VFileManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VFileManagerTests.m; sourceTree = "<group>"; };
+		F79364D41940CE5B00A8D0C9 /* VFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VFileManager.h; path = ../../../Source/VFileManager/VFileManager.h; sourceTree = "<group>"; };
+		F79364D51940CE5B00A8D0C9 /* VFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VFileManager.m; path = ../../../Source/VFileManager/VFileManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F79364A41940CDFC00A8D0C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79364AB1940CDFC00A8D0C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79364B41940CDFD00A8D0C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79364BF1940CDFD00A8D0C9 /* libVFileManager.a in Frameworks */,
+				F79364B91940CDFD00A8D0C9 /* XCTest.framework in Frameworks */,
+				F79364BC1940CDFD00A8D0C9 /* UIKit.framework in Frameworks */,
+				F79364BA1940CDFD00A8D0C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F793649E1940CDFC00A8D0C9 = {
+			isa = PBXGroup;
+			children = (
+				F79364AC1940CDFC00A8D0C9 /* VFileManager */,
+				F79364C01940CDFD00A8D0C9 /* VFileManagerTests */,
+				F79364A91940CDFC00A8D0C9 /* Frameworks */,
+				F79364A81940CDFC00A8D0C9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F79364A81940CDFC00A8D0C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F79364A71940CDFC00A8D0C9 /* libVFileManager.a */,
+				F79364B71940CDFD00A8D0C9 /* VFileManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F79364A91940CDFC00A8D0C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F79364AA1940CDFC00A8D0C9 /* Foundation.framework */,
+				F79364B81940CDFD00A8D0C9 /* XCTest.framework */,
+				F79364BB1940CDFD00A8D0C9 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F79364AC1940CDFC00A8D0C9 /* VFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				F79364D41940CE5B00A8D0C9 /* VFileManager.h */,
+				F79364D51940CE5B00A8D0C9 /* VFileManager.m */,
+				F79364AD1940CDFC00A8D0C9 /* Supporting Files */,
+			);
+			path = VFileManager;
+			sourceTree = "<group>";
+		};
+		F79364AD1940CDFC00A8D0C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F79364AE1940CDFC00A8D0C9 /* VFileManager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F79364C01940CDFD00A8D0C9 /* VFileManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F79364C61940CDFD00A8D0C9 /* VFileManagerTests.m */,
+				F79364C11940CDFD00A8D0C9 /* Supporting Files */,
+			);
+			path = VFileManagerTests;
+			sourceTree = "<group>";
+		};
+		F79364C11940CDFD00A8D0C9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F79364C21940CDFD00A8D0C9 /* VFileManagerTests-Info.plist */,
+				F79364C31940CDFD00A8D0C9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F79364A61940CDFC00A8D0C9 /* VFileManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F79364CA1940CDFD00A8D0C9 /* Build configuration list for PBXNativeTarget "VFileManager" */;
+			buildPhases = (
+				F79364A31940CDFC00A8D0C9 /* Sources */,
+				F79364A41940CDFC00A8D0C9 /* Frameworks */,
+				F79364A51940CDFC00A8D0C9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VFileManager;
+			productName = VFileManager;
+			productReference = F79364A71940CDFC00A8D0C9 /* libVFileManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F79364B61940CDFD00A8D0C9 /* VFileManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F79364CD1940CDFD00A8D0C9 /* Build configuration list for PBXNativeTarget "VFileManagerTests" */;
+			buildPhases = (
+				F79364B31940CDFD00A8D0C9 /* Sources */,
+				F79364B41940CDFD00A8D0C9 /* Frameworks */,
+				F79364B51940CDFD00A8D0C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F79364BE1940CDFD00A8D0C9 /* PBXTargetDependency */,
+			);
+			name = VFileManagerTests;
+			productName = VFileManagerTests;
+			productReference = F79364B71940CDFD00A8D0C9 /* VFileManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F793649F1940CDFC00A8D0C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = www.heyuan110.com;
+			};
+			buildConfigurationList = F79364A21940CDFC00A8D0C9 /* Build configuration list for PBXProject "VFileManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F793649E1940CDFC00A8D0C9;
+			productRefGroup = F79364A81940CDFC00A8D0C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F79364A61940CDFC00A8D0C9 /* VFileManager */,
+				F79364B61940CDFD00A8D0C9 /* VFileManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F79364B51940CDFD00A8D0C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79364C51940CDFD00A8D0C9 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F79364A31940CDFC00A8D0C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79364D61940CE5B00A8D0C9 /* VFileManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F79364B31940CDFD00A8D0C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79364C71940CDFD00A8D0C9 /* VFileManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F79364BE1940CDFD00A8D0C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F79364A61940CDFC00A8D0C9 /* VFileManager */;
+			targetProxy = F79364BD1940CDFD00A8D0C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F79364C31940CDFD00A8D0C9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F79364C41940CDFD00A8D0C9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F79364C81940CDFD00A8D0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F79364C91940CDFD00A8D0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F79364CB1940CDFD00A8D0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VFileManager.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VFileManager/VFileManager-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F79364CC1940CDFD00A8D0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/VFileManager.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VFileManager/VFileManager-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F79364CE1940CDFD00A8D0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VFileManager/VFileManager-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VFileManagerTests/VFileManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F79364CF1940CDFD00A8D0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VFileManager/VFileManager-Prefix.pch";
+				INFOPLIST_FILE = "VFileManagerTests/VFileManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F79364A21940CDFC00A8D0C9 /* Build configuration list for PBXProject "VFileManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79364C81940CDFD00A8D0C9 /* Debug */,
+				F79364C91940CDFD00A8D0C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F79364CA1940CDFD00A8D0C9 /* Build configuration list for PBXNativeTarget "VFileManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79364CB1940CDFD00A8D0C9 /* Debug */,
+				F79364CC1940CDFD00A8D0C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F79364CD1940CDFD00A8D0C9 /* Build configuration list for PBXNativeTarget "VFileManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F79364CE1940CDFD00A8D0C9 /* Debug */,
+				F79364CF1940CDFD00A8D0C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F793649F1940CDFC00A8D0C9 /* Project object */;
+}

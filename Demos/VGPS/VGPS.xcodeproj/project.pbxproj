@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F70428B9194F38A60033BDB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70428B8194F38A50033BDB5 /* Foundation.framework */; };
+		F70428BB194F38A60033BDB5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70428BA194F38A60033BDB5 /* CoreGraphics.framework */; };
+		F70428BD194F38A60033BDB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70428BC194F38A60033BDB5 /* UIKit.framework */; };
+		F70428C3194F38A60033BDB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F70428C1194F38A60033BDB5 /* InfoPlist.strings */; };
+		F70428C5194F38A60033BDB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428C4194F38A60033BDB5 /* main.m */; };
+		F70428C9194F38A60033BDB5 /* VAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428C8194F38A60033BDB5 /* VAppDelegate.m */; };
+		F70428CC194F38A60033BDB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F70428CA194F38A60033BDB5 /* Main.storyboard */; };
+		F70428CF194F38A60033BDB5 /* VViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428CE194F38A60033BDB5 /* VViewController.m */; };
+		F70428D1194F38A60033BDB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F70428D0194F38A60033BDB5 /* Images.xcassets */; };
+		F70428D8194F38A60033BDB5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70428D7194F38A60033BDB5 /* XCTest.framework */; };
+		F70428D9194F38A60033BDB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70428B8194F38A50033BDB5 /* Foundation.framework */; };
+		F70428DA194F38A60033BDB5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70428BC194F38A60033BDB5 /* UIKit.framework */; };
+		F70428E2194F38A60033BDB5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F70428E0194F38A60033BDB5 /* InfoPlist.strings */; };
+		F70428E4194F38A60033BDB5 /* VGPSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428E3194F38A60033BDB5 /* VGPSTests.m */; };
+		F70428EF194F38C70033BDB5 /* VGPS.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428EE194F38C70033BDB5 /* VGPS.m */; };
+		F70428F1194F39380033BDB5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70428F0194F39380033BDB5 /* CoreLocation.framework */; };
+		F70428F3194F39440033BDB5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70428F2194F39440033BDB5 /* MapKit.framework */; };
+		F7042905194F39AA0033BDB5 /* CGRect+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428F6194F39AA0033BDB5 /* CGRect+Extensions.m */; };
+		F7042906194F39AA0033BDB5 /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428F8194F39AA0033BDB5 /* NSArray+Extensions.m */; };
+		F7042907194F39AA0033BDB5 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428FA194F39AA0033BDB5 /* NSDate+Extensions.m */; };
+		F7042908194F39AA0033BDB5 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428FC194F39AA0033BDB5 /* NSString+Extensions.m */; };
+		F7042909194F39AA0033BDB5 /* UIControl+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F70428FE194F39AA0033BDB5 /* UIControl+Extensions.m */; };
+		F704290A194F39AA0033BDB5 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F7042900194F39AA0033BDB5 /* UIImage+Extensions.m */; };
+		F704290B194F39AA0033BDB5 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F7042902194F39AA0033BDB5 /* UIView+Extensions.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F70428DB194F38A60033BDB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70428AD194F38A50033BDB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F70428B4194F38A50033BDB5;
+			remoteInfo = VGPS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F70428B5194F38A50033BDB5 /* VGPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VGPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70428B8194F38A50033BDB5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F70428BA194F38A60033BDB5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F70428BC194F38A60033BDB5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F70428C0194F38A60033BDB5 /* VGPS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VGPS-Info.plist"; sourceTree = "<group>"; };
+		F70428C2194F38A60033BDB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F70428C4194F38A60033BDB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F70428C6194F38A60033BDB5 /* VGPS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VGPS-Prefix.pch"; sourceTree = "<group>"; };
+		F70428C7194F38A60033BDB5 /* VAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VAppDelegate.h; sourceTree = "<group>"; };
+		F70428C8194F38A60033BDB5 /* VAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VAppDelegate.m; sourceTree = "<group>"; };
+		F70428CB194F38A60033BDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F70428CD194F38A60033BDB5 /* VViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VViewController.h; sourceTree = "<group>"; };
+		F70428CE194F38A60033BDB5 /* VViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VViewController.m; sourceTree = "<group>"; };
+		F70428D0194F38A60033BDB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F70428D6194F38A60033BDB5 /* VGPSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VGPSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70428D7194F38A60033BDB5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F70428DF194F38A60033BDB5 /* VGPSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VGPSTests-Info.plist"; sourceTree = "<group>"; };
+		F70428E1194F38A60033BDB5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F70428E3194F38A60033BDB5 /* VGPSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VGPSTests.m; sourceTree = "<group>"; };
+		F70428ED194F38C70033BDB5 /* VGPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VGPS.h; path = ../../../Source/VGPS/VGPS.h; sourceTree = "<group>"; };
+		F70428EE194F38C70033BDB5 /* VGPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VGPS.m; path = ../../../Source/VGPS/VGPS.m; sourceTree = "<group>"; };
+		F70428F0194F39380033BDB5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F70428F2194F39440033BDB5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F70428F5194F39AA0033BDB5 /* CGRect+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CGRect+Extensions.h"; sourceTree = "<group>"; };
+		F70428F6194F39AA0033BDB5 /* CGRect+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CGRect+Extensions.m"; sourceTree = "<group>"; };
+		F70428F7194F39AA0033BDB5 /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
+		F70428F8194F39AA0033BDB5 /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
+		F70428F9194F39AA0033BDB5 /* NSDate+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extensions.h"; sourceTree = "<group>"; };
+		F70428FA194F39AA0033BDB5 /* NSDate+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions.m"; sourceTree = "<group>"; };
+		F70428FB194F39AA0033BDB5 /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		F70428FC194F39AA0033BDB5 /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		F70428FD194F39AA0033BDB5 /* UIControl+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Extensions.h"; sourceTree = "<group>"; };
+		F70428FE194F39AA0033BDB5 /* UIControl+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Extensions.m"; sourceTree = "<group>"; };
+		F70428FF194F39AA0033BDB5 /* UIImage+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extensions.h"; sourceTree = "<group>"; };
+		F7042900194F39AA0033BDB5 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extensions.m"; sourceTree = "<group>"; };
+		F7042901194F39AA0033BDB5 /* UIView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extensions.h"; sourceTree = "<group>"; };
+		F7042902194F39AA0033BDB5 /* UIView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extensions.m"; sourceTree = "<group>"; };
+		F7042903194F39AA0033BDB5 /* VExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VExtensions.h; sourceTree = "<group>"; };
+		F7042904194F39AA0033BDB5 /* VMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMacros.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F70428B2194F38A50033BDB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70428F3194F39440033BDB5 /* MapKit.framework in Frameworks */,
+				F70428F1194F39380033BDB5 /* CoreLocation.framework in Frameworks */,
+				F70428BB194F38A60033BDB5 /* CoreGraphics.framework in Frameworks */,
+				F70428BD194F38A60033BDB5 /* UIKit.framework in Frameworks */,
+				F70428B9194F38A60033BDB5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70428D3194F38A60033BDB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70428D8194F38A60033BDB5 /* XCTest.framework in Frameworks */,
+				F70428DA194F38A60033BDB5 /* UIKit.framework in Frameworks */,
+				F70428D9194F38A60033BDB5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F70428AC194F38A50033BDB5 = {
+			isa = PBXGroup;
+			children = (
+				F70428BE194F38A60033BDB5 /* VGPS */,
+				F70428DD194F38A60033BDB5 /* VGPSTests */,
+				F70428B7194F38A50033BDB5 /* Frameworks */,
+				F70428B6194F38A50033BDB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F70428B6194F38A50033BDB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F70428B5194F38A50033BDB5 /* VGPS.app */,
+				F70428D6194F38A60033BDB5 /* VGPSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F70428B7194F38A50033BDB5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F70428F2194F39440033BDB5 /* MapKit.framework */,
+				F70428F0194F39380033BDB5 /* CoreLocation.framework */,
+				F70428B8194F38A50033BDB5 /* Foundation.framework */,
+				F70428BA194F38A60033BDB5 /* CoreGraphics.framework */,
+				F70428BC194F38A60033BDB5 /* UIKit.framework */,
+				F70428D7194F38A60033BDB5 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F70428BE194F38A60033BDB5 /* VGPS */ = {
+			isa = PBXGroup;
+			children = (
+				F70428F4194F39AA0033BDB5 /* VExtensions */,
+				F70428C7194F38A60033BDB5 /* VAppDelegate.h */,
+				F70428C8194F38A60033BDB5 /* VAppDelegate.m */,
+				F70428ED194F38C70033BDB5 /* VGPS.h */,
+				F70428EE194F38C70033BDB5 /* VGPS.m */,
+				F70428CA194F38A60033BDB5 /* Main.storyboard */,
+				F70428CD194F38A60033BDB5 /* VViewController.h */,
+				F70428CE194F38A60033BDB5 /* VViewController.m */,
+				F70428D0194F38A60033BDB5 /* Images.xcassets */,
+				F70428BF194F38A60033BDB5 /* Supporting Files */,
+			);
+			path = VGPS;
+			sourceTree = "<group>";
+		};
+		F70428BF194F38A60033BDB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F70428C0194F38A60033BDB5 /* VGPS-Info.plist */,
+				F70428C1194F38A60033BDB5 /* InfoPlist.strings */,
+				F70428C4194F38A60033BDB5 /* main.m */,
+				F70428C6194F38A60033BDB5 /* VGPS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F70428DD194F38A60033BDB5 /* VGPSTests */ = {
+			isa = PBXGroup;
+			children = (
+				F70428E3194F38A60033BDB5 /* VGPSTests.m */,
+				F70428DE194F38A60033BDB5 /* Supporting Files */,
+			);
+			path = VGPSTests;
+			sourceTree = "<group>";
+		};
+		F70428DE194F38A60033BDB5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F70428DF194F38A60033BDB5 /* VGPSTests-Info.plist */,
+				F70428E0194F38A60033BDB5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F70428F4194F39AA0033BDB5 /* VExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				F70428F5194F39AA0033BDB5 /* CGRect+Extensions.h */,
+				F70428F6194F39AA0033BDB5 /* CGRect+Extensions.m */,
+				F70428F7194F39AA0033BDB5 /* NSArray+Extensions.h */,
+				F70428F8194F39AA0033BDB5 /* NSArray+Extensions.m */,
+				F70428F9194F39AA0033BDB5 /* NSDate+Extensions.h */,
+				F70428FA194F39AA0033BDB5 /* NSDate+Extensions.m */,
+				F70428FB194F39AA0033BDB5 /* NSString+Extensions.h */,
+				F70428FC194F39AA0033BDB5 /* NSString+Extensions.m */,
+				F70428FD194F39AA0033BDB5 /* UIControl+Extensions.h */,
+				F70428FE194F39AA0033BDB5 /* UIControl+Extensions.m */,
+				F70428FF194F39AA0033BDB5 /* UIImage+Extensions.h */,
+				F7042900194F39AA0033BDB5 /* UIImage+Extensions.m */,
+				F7042901194F39AA0033BDB5 /* UIView+Extensions.h */,
+				F7042902194F39AA0033BDB5 /* UIView+Extensions.m */,
+				F7042903194F39AA0033BDB5 /* VExtensions.h */,
+				F7042904194F39AA0033BDB5 /* VMacros.h */,
+			);
+			name = VExtensions;
+			path = ../../../Source/VExtensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F70428B4194F38A50033BDB5 /* VGPS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70428E7194F38A60033BDB5 /* Build configuration list for PBXNativeTarget "VGPS" */;
+			buildPhases = (
+				F70428B1194F38A50033BDB5 /* Sources */,
+				F70428B2194F38A50033BDB5 /* Frameworks */,
+				F70428B3194F38A50033BDB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VGPS;
+			productName = VGPS;
+			productReference = F70428B5194F38A50033BDB5 /* VGPS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F70428D5194F38A60033BDB5 /* VGPSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F70428EA194F38A60033BDB5 /* Build configuration list for PBXNativeTarget "VGPSTests" */;
+			buildPhases = (
+				F70428D2194F38A60033BDB5 /* Sources */,
+				F70428D3194F38A60033BDB5 /* Frameworks */,
+				F70428D4194F38A60033BDB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F70428DC194F38A60033BDB5 /* PBXTargetDependency */,
+			);
+			name = VGPSTests;
+			productName = VGPSTests;
+			productReference = F70428D6194F38A60033BDB5 /* VGPSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F70428AD194F38A50033BDB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = V;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = fullteem.com;
+				TargetAttributes = {
+					F70428D5194F38A60033BDB5 = {
+						TestTargetID = F70428B4194F38A50033BDB5;
+					};
+				};
+			};
+			buildConfigurationList = F70428B0194F38A50033BDB5 /* Build configuration list for PBXProject "VGPS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F70428AC194F38A50033BDB5;
+			productRefGroup = F70428B6194F38A50033BDB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F70428B4194F38A50033BDB5 /* VGPS */,
+				F70428D5194F38A60033BDB5 /* VGPSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F70428B3194F38A50033BDB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70428D1194F38A60033BDB5 /* Images.xcassets in Resources */,
+				F70428C3194F38A60033BDB5 /* InfoPlist.strings in Resources */,
+				F70428CC194F38A60033BDB5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70428D4194F38A60033BDB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70428E2194F38A60033BDB5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F70428B1194F38A50033BDB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70428CF194F38A60033BDB5 /* VViewController.m in Sources */,
+				F7042905194F39AA0033BDB5 /* CGRect+Extensions.m in Sources */,
+				F7042909194F39AA0033BDB5 /* UIControl+Extensions.m in Sources */,
+				F704290A194F39AA0033BDB5 /* UIImage+Extensions.m in Sources */,
+				F70428EF194F38C70033BDB5 /* VGPS.m in Sources */,
+				F7042908194F39AA0033BDB5 /* NSString+Extensions.m in Sources */,
+				F704290B194F39AA0033BDB5 /* UIView+Extensions.m in Sources */,
+				F70428C5194F38A60033BDB5 /* main.m in Sources */,
+				F7042906194F39AA0033BDB5 /* NSArray+Extensions.m in Sources */,
+				F70428C9194F38A60033BDB5 /* VAppDelegate.m in Sources */,
+				F7042907194F39AA0033BDB5 /* NSDate+Extensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F70428D2194F38A60033BDB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F70428E4194F38A60033BDB5 /* VGPSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F70428DC194F38A60033BDB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F70428B4194F38A50033BDB5 /* VGPS */;
+			targetProxy = F70428DB194F38A60033BDB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F70428C1194F38A60033BDB5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F70428C2194F38A60033BDB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F70428CA194F38A60033BDB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F70428CB194F38A60033BDB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F70428E0194F38A60033BDB5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F70428E1194F38A60033BDB5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F70428E5194F38A60033BDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F70428E6194F38A60033BDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F70428E8194F38A60033BDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VGPS/VGPS-Prefix.pch";
+				INFOPLIST_FILE = "VGPS/VGPS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F70428E9194F38A60033BDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VGPS/VGPS-Prefix.pch";
+				INFOPLIST_FILE = "VGPS/VGPS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F70428EB194F38A60033BDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VGPS.app/VGPS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VGPS/VGPS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VGPSTests/VGPSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F70428EC194F38A60033BDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VGPS.app/VGPS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VGPS/VGPS-Prefix.pch";
+				INFOPLIST_FILE = "VGPSTests/VGPSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F70428B0194F38A50033BDB5 /* Build configuration list for PBXProject "VGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70428E5194F38A60033BDB5 /* Debug */,
+				F70428E6194F38A60033BDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F70428E7194F38A60033BDB5 /* Build configuration list for PBXNativeTarget "VGPS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70428E8194F38A60033BDB5 /* Debug */,
+				F70428E9194F38A60033BDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F70428EA194F38A60033BDB5 /* Build configuration list for PBXNativeTarget "VGPSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F70428EB194F38A60033BDB5 /* Debug */,
+				F70428EC194F38A60033BDB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F70428AD194F38A50033BDB5 /* Project object */;
+}

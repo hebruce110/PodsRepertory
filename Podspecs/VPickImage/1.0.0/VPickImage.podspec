@@ -1,19 +1,13 @@
 Pod::Spec.new do |s|
   s.name         = "VPickImage"
   s.version      = "1.0.0"
-  s.summary      = "快捷调用从相册或相机选择图片"
-  s.homepage     = "http://www.heyuan110.com"
+  s.summary      = "拍照或从相册选择照片"
+  s.homepage     = 'http://code.fullteem.com/ios/PodsRepertory'
   s.license      = "MIT"
-  s.author       = { "Yuan" => "http://www.heyuan110.com" }
-  s.social_media_url   = "http://weibo.com/heyuan110"
+  s.author       = 'Yuan'
   s.platform     = :ios, "5.0"
-  s.source       = { :git => "https://github.com/heyuan110/PodsRepertory.git"}
-  s.source_files  = "VPickImage/*.{h,m}"
-  # s.resource  = "icon.png"
-  #s.resources = "Resources/*.png"
-  # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
-  #s.frameworks = "QuartzCore", "SystemConfiguration"
-  # s.libraries = "iconv", "xml2"
+  s.source       = { :git => 'http://code.fullteem.com/ios/PodsRepertory.git' }
+  s.source_files = "Source/VPickImage/*.{h,m}"
   s.requires_arc = true
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  s.dependency "VExtensions"
 end

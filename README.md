@@ -3,18 +3,20 @@ PodsRepertory
 
 存放Cocoapods中常用类库文件,为了和cocoapods上区分，spec统一用V开头
 
-安装方法: 
+快速安装方法: 
 
 打开终端执行
 
-`curl -L  https://raw.githubusercontent.com/heyuan110/PodsRepertory/master/INSTALL | sh`
+`curl -L  http://code.fullteem.com/ios/PodsRepertory/raw/master/INSTALL | sh`
+
+搞定!
 
 后面就能直接`pod search`对应的类库了,e.g:`pod search VLayoutManager`
 
 XCODE项目里Podfile文件引用
 
 ~~~
-platform :ios,'5.0'
+platform :ios,'6.0'
 inhibit_all_warnings!
 pod 'VLayoutManager'
 ~~~
@@ -24,17 +26,3 @@ pod 'VLayoutManager'
 `pod install --verbose --no-repo-update`
 
 `pod update --verbose --no-repo-update`
-
-
-####VLayoutManager
-
-* 用来布局使用,配合item信息，来draw
-
-####VAESCrypt
-
-* Objective C AESCrypt 加密
-
-####VPickImage
-
-* 快速从相机和相册选择图片
-

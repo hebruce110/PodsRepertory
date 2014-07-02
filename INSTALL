@@ -5,19 +5,19 @@ set -e
 
 export LC_ALL=zh_CN.GB2312;export LANG=zh_CN.GB2312
 
-if [ -d ~/.PodsRepertory ]
+if [ -d ~/.VPodsRepertory ]
 then
-  echo "您已经安装了PodsRepertory，如果你要安装请先删除~/.PodsRepertory "
+  echo "您已经安装了PodsRepertory，如果你要安装请先删除~/.VPodsRepertory "
   exit
 fi
 
 echo "Cloning PodsRepertory..."
-hash git >/dev/null && /usr/bin/env git clone https://github.com/heyuan110/PodsRepertory.git ~/.PodsRepertory || {
+hash git >/dev/null && /usr/bin/env git clone http://code.fullteem.com/ios/PodsRepertory.git ~/.VPodsRepertory || {
   echo "git not installed"
   exit
 }
 
-toPath=~/.cocoapods/repos/master/
+toPath=~/.cocoapods/repos/master/Specs/
 if [ -d "$toPath" ]; then
 	echo "${toPath}目录存在"
 else 
@@ -25,7 +25,7 @@ else
 	echo "创建${toPath}目录成功"
 fi
 echo "正在安装..."
-cp -rf ~/.PodsRepertory/Podspecs/* $toPath
-ls -l ~/.PodsRepertory/Podspecs | grep '^d' | awk '{ print $9 }'
-rm -rf ~/.PodsRepertory
+cp -rf ~/.VPodsRepertory/Podspecs/* $toPath
+ls -l ~/.VPodsRepertory/Podspecs | grep '^d' | awk '{ print $9 }'
+rm -rf ~/.VPodsRepertory
 echo "安装完成，用pod search搜索上面安装成功的库试试~_~！"
