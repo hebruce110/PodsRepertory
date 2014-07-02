@@ -14,22 +14,6 @@
 
 @implementation VVersion
 
-+ (BOOL)stringIsValid:(NSString *)string
-{
-    if (string && [string isKindOfClass:[NSString class]] && string.length > 0) {
-        return YES;
-    }
-    return NO;
-}
-
-+ (BOOL)dictionaryIsValid:(NSDictionary *)dict
-{
-    if (dict && [dict isKindOfClass:[NSDictionary class]]) {
-        return YES;
-    }
-    return NO;
-}
-
 + (id)getURL:(NSString *)url
 {
     if (!isValidString(url)) {
@@ -57,7 +41,7 @@
         NSDictionary *result = [self getURL:[CheckAppVersionURL stringByAppendingString:appId]];
         dispatch_sync(dispatch_get_main_queue(), ^{
             NSLog(@"JSON: %@", result);
-            if ([self dictionaryIsValid:result]) {
+            if (isValidDictionary(result)) {
                 NSArray *array=[result objectForKey:@"results"];
                 if (isValidArray(array)&&[array count]>0) {
                     NSDictionary *dic=[array objectAtIndex:0];
