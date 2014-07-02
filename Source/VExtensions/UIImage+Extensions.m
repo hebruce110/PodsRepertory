@@ -10,6 +10,23 @@
 
 @implementation UIImage (UIImage_Extensions)
 
+
+//压缩图片,originimage为原始图片, compression为开始压缩比例，size为最大的图片size，比如32k，30k
++ (NSData *)compressImageData:(UIImage *)originImage
+              initCompression:(CGFloat)compression
+                      maxSize:(int64_t)size
+{
+    if (!originImage) {
+        return nil;
+    }
+    NSData *imageData = UIImageJPEGRepresentation(originImage, compression);
+    while ([imageData length] > size && compression > 0.1){
+        compression -= 0.1;
+        imageData = UIImageJPEGRepresentation(originImage, compression);
+    }
+    return imageData;
+}
+
 //resize图片
 - (UIImage*)resizedImage:(CGRect)rect
 {

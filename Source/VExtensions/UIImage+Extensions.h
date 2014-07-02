@@ -69,6 +69,10 @@
 //解决图片拍完上传后出现旋转
 - (UIImage *)fixOrientation;
 
++ (NSData *)compressImageData:(UIImage *)originImage
+              initCompression:(CGFloat)compression
+                      maxSize:(int64_t)size;
+
 @end
 
 /*!
