@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:VAppstoreComment/VAppstoreComment.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:VALMoviePlayerController/VALMoviePlayerController.xcodeproj">
    </FileRef>
    <FileRef
