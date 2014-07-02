@@ -34,5 +34,16 @@
 //解析json字符串，返回id类型（NSArray或NSDictionary）
 - (id)toJsonObject;
 
+//将rgb的字符串转为颜色UIColor,rbg之间用逗号隔开,例如:"244,212,53"
+- (UIColor *)rgbToColor;
+
+//将#或0X开头的字符串颜色转换为UIColor，例如:#000000
+- (UIColor *)hexToColor;
+
+//是否是邮件
+- (BOOL)isEmail;
+
+//字符串转为NSDate,字符串8位,格式必需为:yyyymmdd 例如：20080101
+- (NSDate *)toDate;
 
 @end

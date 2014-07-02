@@ -8,6 +8,7 @@
 
 #import "NSString+Extensions.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "VMacros.h"
 
 @implementation NSString (NSString_Extensions)
 
@@ -135,5 +136,84 @@
     return nil;
 }
 
+- (UIColor *)rgbToColor
+{
+    if (isValidString(self)) {
+        NSArray *color = [self componentsSeparatedByString:@","];
+        if (isValidArray(color) && color.count == 3) {
+            return RGB([color[0] intValue], [color[1] intValue], [color[2] intValue], 1.0);
+        }
+    }
+    return [UIColor blackColor];
+}
+
+- (UIColor *)hexToColor
+{
+    NSString *cString = [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    
+    // String should be 6 or 8 characters
+    if ([cString length] < 6) {
+        return [UIColor clearColor];
+    }
+    
+    // strip 0X if it appears
+    if ([cString hasPrefix:@"0X"])
+        cString = [cString substringFromIndex:2];
+    if ([cString hasPrefix:@"#"])
+        cString = [cString substringFromIndex:1];
+    if ([cString length] != 6)
+        return [UIColor clearColor];
+    
+    // Separate into r, g, b substrings
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    
+    //r
+    NSString *rString = [cString substringWithRange:range];
+    
+    //g
+    range.location = 2;
+    NSString *gString = [cString substringWithRange:range];
+    
+    //b
+    range.location = 4;
+    NSString *bString = [cString substringWithRange:range];
+    
+    // Scan values
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rString] scanHexInt:&r];
+    [[NSScanner scannerWithString:gString] scanHexInt:&g];
+    [[NSScanner scannerWithString:bString] scanHexInt:&b];
+    
+    return [UIColor colorWithRed:((float) r / 255.0f) green:((float) g / 255.0f) blue:((float) b / 255.0f) alpha:1.0f];
+}
+
+- (NSDate *)toDate
+{
+    if (isValidString(self) && self.length == 8) {
+        @try {
+            NSString *year = [self substringToIndex:4];
+            NSString *month = [self substringWithRange:NSMakeRange(4, 2)];
+            NSString *day = [self substringWithRange:NSMakeRange(6, 2)];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateStyle:NSDateFormatterMediumStyle];
+            [formatter setTimeStyle:NSDateFormatterShortStyle];
+            [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+            NSDate *date = [formatter dateFromString:[NSString stringWithFormat:@"%@-%@-%@ 00:00:00",year,month,day]];
+            return date;
+        }
+        @catch (NSException *exception) {
+            return nil;
+        }
+    }
+    return nil;
+}
+
+- (BOOL)isEmail{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailPredicate evaluateWithObject:self];
+}
 
 @end
