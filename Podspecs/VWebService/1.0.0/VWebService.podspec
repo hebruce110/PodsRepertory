@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = 'Yuan'
   s.platform     = :ios, "6.0"
   s.source       = { :git => 'https://github.com/heyuan110/PodsRepertory.git' }
-  s.source_files = "Source/VWebService/*.{h,m}"
+  s.source_files = "Source/VWebService/*.{h,m,plist}"
   s.requires_arc = true
   s.dependency "VExtensions"
   s.dependency "AFNetworking", "~> 2.0"

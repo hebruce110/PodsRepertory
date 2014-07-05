@@ -7,6 +7,7 @@
 //
 
 #import "AFHTTPRequestOperationManager.h"
+#import "VExtensions.h"
 
 #define kSignatureCode @"vwebservice.request.signaturecode"
 #define kWebServiceURL @"vwebservice.request.url"

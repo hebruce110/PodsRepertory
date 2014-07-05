@@ -7,6 +7,7 @@
 //
 
 #import "VRequestManager.h"
+#import "VWebService.h"
 
 //request parameter key
 static NSString *const kResquestParameter            = @"p";
