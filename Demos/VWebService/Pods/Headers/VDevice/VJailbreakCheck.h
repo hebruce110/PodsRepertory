@@ -1,1 +1,0 @@
-../../VDevice/Source/VDevice/Utilities/VJailbreakCheck.h
