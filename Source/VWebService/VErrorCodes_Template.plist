@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>0000</key>
+	<string>请求成功</string>
+	<key>-404</key>
+	<string>服务异常，请稍后再试</string>
+	<key>-1000</key>
+	<string>网络不给力</string>
+	<key>-999</key>
+	<string>取消请求</string>
+	<key>-1001</key>
+	<string>请求超时,请重试</string>
+	<key>-1011</key>
+	<string>哎呦,服务器累趴了^o^</string>
+	<key>-1004</key>
+	<string>连接服务器失败</string>
+</dict>
+</plist>
