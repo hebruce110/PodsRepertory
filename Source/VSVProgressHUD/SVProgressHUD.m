@@ -448,8 +448,8 @@ CGFloat SVProgressHUDRingThickness = 6;
     
     if(!self.overlayView.superview){
         //Yuan edit
-        [[[UIApplication sharedApplication].windows lastObject] addSubview:self.overlayView];
-        /*
+//        [[[UIApplication sharedApplication].windows lastObject] addSubview:self.overlayView];
+        
         NSEnumerator *frontToBackWindows = [[[UIApplication sharedApplication]windows]reverseObjectEnumerator];
         for (UIWindow *window in frontToBackWindows){
             if (window.windowLevel == UIWindowLevelNormal) {
@@ -457,7 +457,7 @@ CGFloat SVProgressHUDRingThickness = 6;
                 break;
             }
          }
-         */
+        
     }
     
     if(!self.superview)
