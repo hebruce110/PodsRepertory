@@ -18,8 +18,8 @@
 {
     [super viewDidLoad];
     
-    [VWebService postRequestAction:@"lookup"
-                        parameter:@{@"id": @"684198097"}
+    [VWebService getRequestAction:nil
+                        parameter:@{@"userid": @"684198097"}
                     callbackBlock:^(id result, BOOL status, NSError *error) {
                         HYLog(@"%@",result);
     }];

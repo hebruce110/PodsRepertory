@@ -8,11 +8,12 @@
 
 #import "VAppDelegate.h"
 
+//https://api.heyuan110.com/webservice/format.php?sign=06df905694bf8f3c0efafecbaef4dc60&p=hahaha&appinfo=%22320*480%22
 @implementation VAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [VWebService configURL:@"http://itunes.apple.com" signatureCode:@"XxV58bu28P7a885X"];
+    [VWebService configURL:@"https://api.heyuan110.com/webservice/format.php" signatureCode:@"3m7GW7qUSoC75W27f"];
     return YES;
 }
 							

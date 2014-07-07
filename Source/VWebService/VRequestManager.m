@@ -12,7 +12,6 @@
 //request parameter key
 static NSString *const kResquestParameter            = @"p";
 static NSString *const kResquestParameterSignature   = @"sign";
-static NSString *const kResquestParameterAppinfo     = @"appinfo";
 
 static NSString *const kAppInfoPlatform             = @"plat";
 static NSString *const kAppInfoVersion              = @"version";
@@ -54,6 +53,9 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     if (!self) {
         return nil;
     }
+    self.securityPolicy.allowInvalidCertificates = YES;
+    self.responseSerializer.acceptableContentTypes = [self.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    self.responseSerializer.acceptableContentTypes = [self.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     _webserviceURL = url.absoluteString;
     return self;
 }
@@ -93,21 +95,19 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     //这里读取在项目中设置的基础参数
     NSMutableDictionary *newParameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
     [newParameters addEntriesFromDictionary:[self getAdditionParameters]];
+    //添加App的信息
+    newParameters[kAppInfoPlatform]=@"ios";
+    newParameters[kAppInfoVersion]=kAppVersion;
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    newParameters[kAppInfoScreenSize]=[NSString stringWithFormat:@"%.f,%.f",screenSize.width,screenSize.height];
+
     NSString *parametersJsonString = FormatString([newParameters toJsonString], @"");
     
-    //App的信息
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    NSDictionary *appInfo = @{kAppInfoPlatform: @"ios",
-                              kAppInfoVersion:kAppVersion,
-                              kAppInfoScreenSize:[NSString stringWithFormat:@"%.f,%.f",screenSize.width,screenSize.height]};
-    NSString *appInfoJsonString = FormatString([appInfo toJsonString], @"");
-    
     //校验字符串
-    NSString* signature=[[NSString stringWithFormat:@"%@%@%@",[self getSignatureCode],parametersJsonString,appInfoJsonString] toMD5];
+    NSString* signature=[[NSString stringWithFormat:@"%@%@",[self getSignatureCode],parametersJsonString] toMD5];
     
     //处理后传递的参数
-    NSDictionary *vars = @{kResquestParameterAppinfo:appInfoJsonString,
-                           kResquestParameterSignature:signature,
+    NSDictionary *vars = @{kResquestParameterSignature:signature,
                            kResquestParameter:parametersJsonString};
     return vars;
 }
@@ -119,6 +119,9 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
 {
     action = FormatString(action,@"");
     NSString *urlString = [[NSURL URLWithString:action relativeToURL:self.baseURL] absoluteString];
+    if (urlString.length>0 && [[urlString substringFromIndex:urlString.length-1] isEqualToString:@"/"]) { //如果最后一个是/就去掉
+        urlString = [urlString substringToIndex:urlString.length-1];
+    }
     NSDictionary *vars = [self formatParameters:parameters];
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:methord URLString:urlString parameters:vars error:nil];
     HYLog(@"\nHTTP Request:＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝》\nMethord: %@ %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",methord,[[NSDate date] formatYMDHMS],action,vars,request.URL.absoluteString);
