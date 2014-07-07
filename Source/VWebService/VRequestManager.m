@@ -53,10 +53,20 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     if (!self) {
         return nil;
     }
+    
+    //add https support
     self.securityPolicy.allowInvalidCertificates = YES;
+    
+    //add text/html,plain
     self.responseSerializer.acceptableContentTypes = [self.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     self.responseSerializer.acceptableContentTypes = [self.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     _webserviceURL = url.absoluteString;
+    
+    //add app info to request header
+    [self.requestSerializer setValue:kAppVersion forHTTPHeaderField:kAppInfoVersion];
+    [self.requestSerializer setValue:@"ios" forHTTPHeaderField:kAppInfoPlatform];
+    [self.requestSerializer setValue:[NSString stringWithFormat:@"%.fx%.f",[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height] forHTTPHeaderField:kAppInfoScreenSize];
+
     return self;
 }
 
@@ -95,21 +105,19 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     //这里读取在项目中设置的基础参数
     NSMutableDictionary *newParameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
     [newParameters addEntriesFromDictionary:[self getAdditionParameters]];
-    //添加App的信息
-    newParameters[kAppInfoPlatform]=@"ios";
-    newParameters[kAppInfoVersion]=kAppVersion;
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    newParameters[kAppInfoScreenSize]=[NSString stringWithFormat:@"%.f,%.f",screenSize.width,screenSize.height];
-
     NSString *parametersJsonString = FormatString([newParameters toJsonString], @"");
     
     //校验字符串
     NSString* signature=[[NSString stringWithFormat:@"%@%@",[self getSignatureCode],parametersJsonString] toMD5];
+    //将校验位传递到header中
+    [self.requestSerializer setValue:signature forHTTPHeaderField:kResquestParameterSignature];
     
-    //处理后传递的参数
-    NSDictionary *vars = @{kResquestParameterSignature:signature,
-                           kResquestParameter:parametersJsonString};
-    return vars;
+    //如果为空就返回nil
+    if (newParameters.count<1) {
+        return nil;
+    }
+    
+    return @{kResquestParameter:parametersJsonString};
 }
 
 - (void)requstMethord:(NSString *)methord

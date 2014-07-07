@@ -16,7 +16,7 @@
 /* HTTP Methord*/
 #define kRequestMethodGet                                 @"GET"
 #define kRequestMethodPut                                 @"PUT"
-#define kRequestMethodPost                                @"POST"
+#define kRequestMethodPost                                @"GET"
 #define kRequestMethodPatch                               @"PATCH"
 #define kRequestMethodDelete                              @"DELETE"
 
