@@ -216,4 +216,18 @@
     return [emailPredicate evaluateWithObject:self];
 }
 
+- (CGSize)sizeWithMaxWidth:(CGFloat)maxWidth
+                      font:(UIFont *)font
+            lineBreakModel:(NSLineBreakMode)mode
+{
+    CGSize textBlockMinSize = {maxWidth,CGFLOAT_MAX};
+    CGSize size;
+    if (isIOS7) {
+        size = [self boundingRectWithSize:textBlockMinSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil].size;
+    }else{
+        size = [self sizeWithFont:font constrainedToSize:textBlockMinSize lineBreakMode:mode];
+    }
+    return size;
+}
+
 @end

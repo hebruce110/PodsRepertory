@@ -46,4 +46,9 @@
 //字符串转为NSDate,字符串8位,格式必需为:yyyymmdd 例如：20080101
 - (NSDate *)toDate;
 
+//计算string的高度，兼容ios7和之前
+- (CGSize)sizeWithMaxWidth:(CGFloat)maxWidth
+                      font:(UIFont *)font
+            lineBreakModel:(NSLineBreakMode)mode;
+
 @end
