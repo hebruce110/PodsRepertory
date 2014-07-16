@@ -35,6 +35,12 @@
 //从view获得view所在的controller
 - (UIViewController*)getViewController;
 
+//设置string的tag
+-(void)stringTag:(NSString*) tag;
+
+//根据stringTag获取view
+-(UIView*)viewWithStringTag:(NSString*)tag;
+
 @end
 
 //用typedef定义DismissBlock和CancelBlock

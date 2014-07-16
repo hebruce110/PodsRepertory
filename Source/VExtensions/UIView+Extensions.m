@@ -89,6 +89,16 @@
     return nil;
 }
 
+-(void) stringTag:(NSString *)tag
+{
+    [self setTag:[tag hash]];
+}
+
+-(UIView *)viewWithStringTag:(NSString *)tag
+{
+    return [self viewWithTag:[tag hash]];
+}
+
 @end
 
 

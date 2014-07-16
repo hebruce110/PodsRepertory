@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>098F0DA5-3551-4D9F-BDF1-645A262491CB</string>
+	<string>AC82526B-9774-4A6B-9903-14F801FDAA08</string>
 	<key>IDESourceControlProjectName</key>
 	<string>VWebService</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>CA3A1B04-8CF0-4E0D-A588-52D8A4BD00AA</key>
-		<string>https://github.com/heyuan110/PodsRepertory</string>
+		<key>25432AB5-0066-40F3-BA25-9D789CC6E513</key>
+		<string>https://github.com/heyuan110/PodsRepertory.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Demos/VWebService/VWebService.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>CA3A1B04-8CF0-4E0D-A588-52D8A4BD00AA</key>
+		<key>25432AB5-0066-40F3-BA25-9D789CC6E513</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/heyuan110/PodsRepertory</string>
+	<string>https://github.com/heyuan110/PodsRepertory.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CA3A1B04-8CF0-4E0D-A588-52D8A4BD00AA</string>
+	<string>25432AB5-0066-40F3-BA25-9D789CC6E513</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CA3A1B04-8CF0-4E0D-A588-52D8A4BD00AA</string>
+			<string>25432AB5-0066-40F3-BA25-9D789CC6E513</string>
 			<key>IDESourceControlWCCName</key>
 			<string>PodsRepertory</string>
 		</dict>

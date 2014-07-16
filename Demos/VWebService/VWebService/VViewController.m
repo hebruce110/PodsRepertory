@@ -18,7 +18,7 @@
 {
     [super viewDidLoad];
     
-    [VWebService getRequestAction:nil
+    [VWebService getRequestAction:@"userinfo"
                         parameter:@{@"userid": @"684198097"}
                     callbackBlock:^(id result, BOOL status, NSError *error) {
                         HYLog(@"%@",result);
