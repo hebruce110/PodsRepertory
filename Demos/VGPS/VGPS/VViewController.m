@@ -7,6 +7,7 @@
 //
 
 #import "VViewController.h"
+#import "VGPS.h"
 
 @interface VViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if ([VGPS sharedVGPS].locationSuccess) {
+        
+    }
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

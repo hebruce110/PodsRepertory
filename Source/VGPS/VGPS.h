@@ -27,6 +27,7 @@ typedef struct
     Location currentLocation;
     BOOL isLocationing;
 }
+@property(nonatomic)BOOL locationSuccess;
 @property (nonatomic)BOOL isLocationing;
 @property (nonatomic) Location currentLocation;
 

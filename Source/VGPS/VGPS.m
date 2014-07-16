@@ -153,6 +153,7 @@ SINGLETON_GCD(VGPS)
 
 - (void)startUpdateLocation
 {
+    _locationSuccess = NO;
     isLocationing = YES;
     if (!_locationManager)
     {
@@ -188,6 +189,8 @@ SINGLETON_GCD(VGPS)
     {
         errorMsg = VString(@"获取位置信息失败");
     }
+    _locationSuccess = NO;
+    
     [self stopUpdateLocation];
 }
 
@@ -204,6 +207,8 @@ SINGLETON_GCD(VGPS)
 		[self locationManager:manager didFailWithError:(NSError *)NULL];
 		return;
 	}
+    
+    _locationSuccess =  YES;
     
     currentLocation.lat = newLocation.coordinate.latitude;
     
