@@ -11,6 +11,8 @@ PodsRepertory
 
 搞定!
 
+建议将上面的命令设置为alias，方便快捷更新
+
 后面就能直接`pod search`对应的类库了,e.g:`pod search VLayoutManager`
 
 XCODE项目里Podfile文件引用

@@ -28,6 +28,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
 //约定的默认校验串码
 #define kSignatureDefaultCode @"XxV58bu28P7a885X"
 
+
 @implementation VRequestManager
 {
     NSDictionary *_errorCodes;
@@ -53,6 +54,12 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     if (!self) {
         return nil;
     }
+
+    //set request timeout
+#ifdef VWEBSERVICE_REQUEST_TIMEOUT
+    HYLog(@"SET VWEBSERVICE_REQUEST_TIMEOUT %d",VWEBSERVICE_REQUEST_TIMEOUT);
+    [self.requestSerializer setTimeoutInterval:VWEBSERVICE_REQUEST_TIMEOUT];
+#endif
     
     //add https support
     self.securityPolicy.allowInvalidCertificates = YES;
@@ -109,6 +116,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     
     //校验字符串
     NSString* signature=[[NSString stringWithFormat:@"%@%@",[self getSignatureCode],parametersJsonString] toMD5];
+    
     //将校验位传递到header中
     [self.requestSerializer setValue:signature forHTTPHeaderField:kResquestParameterSignature];
     
@@ -130,7 +138,14 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     if (urlString.length>0 && [[urlString substringFromIndex:urlString.length-1] isEqualToString:@"/"]) { //如果最后一个是/就去掉
         urlString = [urlString substringToIndex:urlString.length-1];
     }
+    
+    //如果请求不是按照约定的格式，那么就会按正常的request的格式去请求，不进行校验等.
+#ifdef VWEBSERVICE_REQUEST_NOT_FORMATTING_CONVENTIONS
+    NSDictionary *vars = parameters;
+#else
     NSDictionary *vars = [self formatParameters:parameters];
+#endif
+    
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:methord URLString:urlString parameters:vars error:nil];
     HYLog(@"\nHTTP Request:＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝》\nMethord: %@ %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",methord,[[NSDate date] formatYMDHMS],action,vars,request.URL.absoluteString);
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
@@ -144,13 +159,20 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     [self.operationQueue addOperation:operation];
 }
 
-
 - (void)handleRequest:(AFHTTPRequestOperation *)operation
                result:(id)info
                status:(BOOL)status
         callbackBlock:(RequestCallBackBlock)block
 {
     if (block){
+        
+#ifdef VWEBSERVICE_RESPONSE_NOT_FORMATTING_CONVENTIONS    //返回的数据不是采用的约定格式，自定义处理
+        if (status) {
+            block(info,status,nil);
+        }else {
+            block(nil,status,info);
+        }
+#else
         if (isValidDictionary(info)) {
             id responseStatus = info[kResponseParameterStatus];
             if (!responseStatus) {
@@ -163,6 +185,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
             error = [self createError:error.code description:nil];
             block(nil,status,error);
         }
+#endif
     }
 }
 
