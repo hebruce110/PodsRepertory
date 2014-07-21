@@ -214,7 +214,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
              description:(NSString *)errorDescription
 {
 
-    if (errorCode == 0)return nil;
+    if (errorCode == 0 || errorCode == 200)return nil;
     if (![VWebService isConnected])errorCode = -1000;
     if (!isValidString(errorDescription)) {
         errorDescription = [self errorDescriptionWithErrorCode:[@(errorCode) stringValue]];
