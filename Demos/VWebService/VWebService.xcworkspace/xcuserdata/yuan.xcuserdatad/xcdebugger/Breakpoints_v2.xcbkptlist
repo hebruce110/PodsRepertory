@@ -31,8 +31,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "130"
             endingLineNumber = "130"
-            landmarkName = "@implementation VRequestManager"
-            landmarkType = "3">
+            landmarkName = "-requstMethord:action:parameter:callbackBlock:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
             endingLineNumber = "129"
-            landmarkName = "-formatParameters:"
+            landmarkName = "-requstMethord:action:parameter:callbackBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

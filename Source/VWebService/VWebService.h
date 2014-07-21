@@ -36,6 +36,27 @@
     signatureCode:(NSString *)code;
 
 /**
+ *  设置超时时间
+ *
+ *  @param timeOut 超时时间
+ */
++ (void)setTimeOut:(NSInteger)timeOut;
+
+/**
+ *  请求的参数格式为约定格式
+ *
+ *  @param isAgreed 是否是约定的
+ */
++ (void)setIsAgreedParameterFormat:(BOOL)isAgreed;
+
+/**
+ *  返回数据的内容格式为约定格式
+ *
+ *  @param isAgreed 是否是约定的
+ */
++ (void)setIsAgreedResponseContentFormat:(BOOL)isAgreed;
+
+/**
  *  设置一些通用的参数到请求里，所有的接口都会带上这些参数，比如userid，token等，请传入字典格式
  *
  *  @param dict

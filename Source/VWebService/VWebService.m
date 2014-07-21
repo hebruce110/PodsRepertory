@@ -20,6 +20,20 @@
     [[VRequestManager sharedInstance]initErrorCodes];
 }
 
++ (void)setIsAgreedParameterFormat:(BOOL)isAgreed
+{
+    if (isValidString([[NSUserDefaults standardUserDefaults]valueForKey:kWebServiceURL])) {
+        [[VRequestManager sharedInstance]setIsAgreedParameterFormat:isAgreed];
+    }
+}
+
++ (void)setIsAgreedResponseContentFormat:(BOOL)isAgreed
+{
+    if (isValidString([[NSUserDefaults standardUserDefaults]valueForKey:kWebServiceURL])) {
+        [[VRequestManager sharedInstance]setIsAgreedResponseContentFormat:isAgreed];
+    }
+}
+
 + (void)setAdditionParameters:(NSDictionary *)parameters
 {
     if (isValidDictionary(parameters)) {
@@ -32,6 +46,11 @@
 
 + (BOOL)isConnected{
     return [AFNetworkReachabilityManager sharedManager].reachable;
+}
+
++ (void)setTimeOut:(NSInteger)timeOut
+{
+    [[VRequestManager sharedInstance].requestSerializer setTimeoutInterval:timeOut];
 }
 
 #pragma mark Request action

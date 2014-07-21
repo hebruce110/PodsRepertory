@@ -42,6 +42,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     dispatch_once(&onceSingleton, ^{
         NSString *url = [[NSUserDefaults standardUserDefaults]valueForKey:kWebServiceURL];
         if (!isValidString(url)) {
+            HYLog(@"#######error: please configure webservice url######");
             url = @"";
         }
         sharedInstance = [[self alloc] initWithBaseURL:[NSURL URLWithString:url]];
@@ -54,12 +55,6 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     if (!self) {
         return nil;
     }
-
-    //set request timeout
-#ifdef VWEBSERVICE_REQUEST_TIMEOUT
-    HYLog(@"SET VWEBSERVICE_REQUEST_TIMEOUT %d",VWEBSERVICE_REQUEST_TIMEOUT);
-    [self.requestSerializer setTimeoutInterval:VWEBSERVICE_REQUEST_TIMEOUT];
-#endif
     
     //add https support
     self.securityPolicy.allowInvalidCertificates = YES;
@@ -68,6 +63,8 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     self.responseSerializer.acceptableContentTypes = [self.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     self.responseSerializer.acceptableContentTypes = [self.responseSerializer.acceptableContentTypes setByAddingObject:@"text/plain"];
     _webserviceURL = url.absoluteString;
+    _isAgreedParameterFormat = YES;
+    _isAgreedResponseContentFormat = YES;
     
     //add app info to request header
     [self.requestSerializer setValue:kAppVersion forHTTPHeaderField:kAppInfoVersion];
@@ -140,12 +137,8 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     }
     
     //如果请求不是按照约定的格式，那么就会按正常的request的格式去请求，不进行校验等.
-#ifdef VWEBSERVICE_REQUEST_NOT_FORMATTING_CONVENTIONS
-    NSDictionary *vars = parameters;
-#else
-    NSDictionary *vars = [self formatParameters:parameters];
-#endif
-    
+    NSDictionary *vars = _isAgreedParameterFormat?[self formatParameters:parameters]:parameters;
+
     NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:methord URLString:urlString parameters:vars error:nil];
     HYLog(@"\nHTTP Request:＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝》\nMethord: %@ %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",methord,[[NSDate date] formatYMDHMS],action,vars,request.URL.absoluteString);
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
@@ -165,27 +158,26 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
         callbackBlock:(RequestCallBackBlock)block
 {
     if (block){
-        
-#ifdef VWEBSERVICE_RESPONSE_NOT_FORMATTING_CONVENTIONS    //返回的数据不是采用的约定格式，自定义处理
-        if (status) {
-            block(info,status,nil);
-        }else {
-            block(nil,status,info);
-        }
-#else
-        if (isValidDictionary(info)) {
-            id responseStatus = info[kResponseParameterStatus];
-            if (!responseStatus) {
-                responseStatus = @(0);
+        if (_isAgreedResponseContentFormat) {
+            if (isValidDictionary(info)) {
+                id responseStatus = info[kResponseParameterStatus];
+                if (!responseStatus) {
+                    responseStatus = @(0);
+                }
+                NSError *error = [self createError:[responseStatus intValue] description:info[kResponseParameterMessage]];
+                block(info[kResponseParameterContent],status,error);
+            }else if(info && [info isKindOfClass:[NSError class]]){
+                NSError *error = (NSError *)info;
+                error = [self createError:error.code description:nil];
+                block(nil,status,error);
             }
-            NSError *error = [self createError:[responseStatus intValue] description:info[kResponseParameterMessage]];
-            block(info[kResponseParameterContent],status,error);
-        }else if(info && [info isKindOfClass:[NSError class]]){
-            NSError *error = (NSError *)info;
-            error = [self createError:error.code description:nil];
-            block(nil,status,error);
+        }else { //返回的数据不是采用的约定格式，自定义处理
+            if (status) {
+                block(info,status,nil);
+            }else {
+                block(nil,status,info);
+            }
         }
-#endif
     }
 }
 

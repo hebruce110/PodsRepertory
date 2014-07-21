@@ -10,10 +10,6 @@
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
-//#define VWEBSERVICE_REQUEST_TIMEOUT 30                      //设置超时时间
-//#define VWEBSERVICE_REQUEST_NOT_FORMATTING_CONVENTIONS      //不是按照约定的请求参数格式
-//#define VWEBSERVICE_RESPONSE_NOT_FORMATTING_CONVENTIONS     //不是按约定的格式返回
-
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
