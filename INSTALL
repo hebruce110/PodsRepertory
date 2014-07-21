@@ -7,25 +7,30 @@ export LC_ALL=zh_CN.GB2312;export LANG=zh_CN.GB2312
 
 if [ -d ~/.VPodsRepertory ]
 then
-  echo "您已经安装了VPodsRepertory，如果你要安装请先删除~/.VPodsRepertory "
-  exit
+  echo "Already installed VPodsRepertory"
+  echo "Update VPodsRepertory..."
+  cd ~/.VPodsRepertory
+  hash git >/dev/null && /usr/bin/env git pull --verbose|| {
+	echo "git not installed"
+	exit
+  }
+else
+	echo "Cloning VPodsRepertory..."
+	hash git >/dev/null && /usr/bin/env git clone https://github.com/heyuan110/PodsRepertory.git ~/.VPodsRepertory || {
+	  echo "git not installed"
+	  exit
+	}
 fi
-
-echo "Cloning VPodsRepertory..."
-hash git >/dev/null && /usr/bin/env git clone https://github.com/heyuan110/PodsRepertory.git ~/.VPodsRepertory || {
-  echo "git not installed"
-  exit
-}
 
 toPath=~/.cocoapods/repos/master/Specs/
 if [ -d "$toPath" ]; then
-	echo "${toPath}目录存在"
+	echo "${toPath} exists"
 else 
 	mkdir -p $toPath
-	echo "创建${toPath}目录成功"
+	echo "create ${toPath} folder successed!"
 fi
-echo "正在安装..."
+echo "Update podspecs..."
 cp -rf ~/.VPodsRepertory/Podspecs/* $toPath
 ls -l ~/.VPodsRepertory/Podspecs | grep '^d' | awk '{ print $9 }'
-rm -rf ~/.VPodsRepertory
-echo "安装完成，用pod search搜索上面安装成功的库试试~_~！"
+# rm -rf ~/.VPodsRepertory
+echo "Installed successfully! please have try 'pod search VExtensions' ~_~！"
