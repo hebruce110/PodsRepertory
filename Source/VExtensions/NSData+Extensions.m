@@ -11,6 +11,13 @@
 
 @implementation NSData(NSData_Extensions)
 
+/*
+文件的md5校验，e.g:
+NSString *path = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"mp3"];
+NSData *data = [NSData dataWithContentsOfFile:path];
+if(data)
+NSLog(@"data md5 %@", [data MD5]);
+*/
 - (NSString*)MD5
 {
     // Create byte array of unsigned chars

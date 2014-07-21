@@ -10,6 +10,7 @@
 
 @interface NSData (NSData_Extensions)
 
+//NSData的md5，可以对文件完整性进行校验
 - (NSString *)MD5;
 
 @end
