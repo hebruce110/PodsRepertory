@@ -23,7 +23,6 @@
 - (UIColor *)initWithRGBValue:(int32_t)rgb;
 - (UIColor *)initWithRGBAValue:(uint32_t)rgba;
 
-
 - (int32_t)RGBValue;
 - (uint32_t)RGBAValue;
 - (NSString *)stringValue;
@@ -31,5 +30,7 @@
 - (BOOL)isMonochromeOrRGB;
 - (BOOL)isEquivalent:(id)object;
 - (BOOL)isEquivalentToColor:(UIColor *)color;
+
++ (UIColor *)lightRandom;
 
 @end
