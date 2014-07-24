@@ -12,6 +12,8 @@
 		1C2A255B1941A2A200F44F15 /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A255A1941A2A200F44F15 /* NSString+Extensions.m */; };
 		1C2A255E1941A7F500F44F15 /* UIImage+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A255D1941A7F500F44F15 /* UIImage+Extensions.m */; };
 		1C2A25621941C44700F44F15 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A25611941C44700F44F15 /* NSDate+Extensions.m */; };
+		1C9A15F8198119C10028F894 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A15F5198119C10028F894 /* GTMNSString+HTML.m */; };
+		1C9A15F9198119C10028F894 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9A15F7198119C10028F894 /* NSString+HTML.m */; };
 		1CAF4A72197A89FF00102546 /* NSData+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAF4A71197A89FF00102546 /* NSData+Extensions.m */; };
 		F704290E194F3D9D0033BDB5 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F704290D194F3D9D0033BDB5 /* UIColor+Extensions.m */; };
 		F7042914194F3F370033BDB5 /* NSObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F7042913194F3F370033BDB5 /* NSObject+Extensions.m */; };
@@ -59,6 +61,10 @@
 		1C2A255D1941A7F500F44F15 /* UIImage+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Extensions.m"; path = "../../../Source/VExtensions/UIImage+Extensions.m"; sourceTree = "<group>"; };
 		1C2A25601941C44700F44F15 /* NSDate+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Extensions.h"; path = "../../../Source/VExtensions/NSDate+Extensions.h"; sourceTree = "<group>"; };
 		1C2A25611941C44700F44F15 /* NSDate+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Extensions.m"; path = "../../../Source/VExtensions/NSDate+Extensions.m"; sourceTree = "<group>"; };
+		1C9A15F4198119C10028F894 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GTMNSString+HTML.h"; path = "../../../Source/VExtensions/GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		1C9A15F5198119C10028F894 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "GTMNSString+HTML.m"; path = "../../../Source/VExtensions/GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		1C9A15F6198119C10028F894 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+HTML.h"; path = "../../../Source/VExtensions/NSString+HTML.h"; sourceTree = "<group>"; };
+		1C9A15F7198119C10028F894 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTML.m"; path = "../../../Source/VExtensions/NSString+HTML.m"; sourceTree = "<group>"; };
 		1CAF4A70197A89FF00102546 /* NSData+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Extensions.h"; path = "../../../Source/VExtensions/NSData+Extensions.h"; sourceTree = "<group>"; };
 		1CAF4A71197A89FF00102546 /* NSData+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Extensions.m"; path = "../../../Source/VExtensions/NSData+Extensions.m"; sourceTree = "<group>"; };
 		F704290C194F3D9D0033BDB5 /* UIColor+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Extensions.h"; path = "../../../Source/VExtensions/UIColor+Extensions.h"; sourceTree = "<group>"; };
@@ -147,6 +153,10 @@
 				F704290D194F3D9D0033BDB5 /* UIColor+Extensions.m */,
 				1C2A25591941A2A200F44F15 /* NSString+Extensions.h */,
 				1C2A255A1941A2A200F44F15 /* NSString+Extensions.m */,
+				1C9A15F6198119C10028F894 /* NSString+HTML.h */,
+				1C9A15F7198119C10028F894 /* NSString+HTML.m */,
+				1C9A15F4198119C10028F894 /* GTMNSString+HTML.h */,
+				1C9A15F5198119C10028F894 /* GTMNSString+HTML.m */,
 				1C2A25601941C44700F44F15 /* NSDate+Extensions.h */,
 				1C2A25611941C44700F44F15 /* NSDate+Extensions.m */,
 				1C2A255C1941A7F500F44F15 /* UIImage+Extensions.h */,
@@ -275,11 +285,13 @@
 				1C2A255E1941A7F500F44F15 /* UIImage+Extensions.m in Sources */,
 				F79365591940E87B00A8D0C9 /* UIView+Extensions.m in Sources */,
 				F79365581940E87B00A8D0C9 /* CGRect+Extensions.m in Sources */,
+				1C9A15F8198119C10028F894 /* GTMNSString+HTML.m in Sources */,
 				1CAF4A72197A89FF00102546 /* NSData+Extensions.m in Sources */,
 				1C2A25581941A05200F44F15 /* NSArray+Extensions.m in Sources */,
 				1C2A255519419F9100F44F15 /* UIControl+Extensions.m in Sources */,
 				F7042914194F3F370033BDB5 /* NSObject+Extensions.m in Sources */,
 				1C2A25621941C44700F44F15 /* NSDate+Extensions.m in Sources */,
+				1C9A15F9198119C10028F894 /* NSString+HTML.m in Sources */,
 				F704290E194F3D9D0033BDB5 /* UIColor+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

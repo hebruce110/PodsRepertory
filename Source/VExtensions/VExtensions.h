@@ -12,6 +12,7 @@
 #import "UIControl+Extensions.h"
 #import "NSArray+Extensions.h"
 #import "NSString+Extensions.h"
+#import "NSString+HTML.h"
 #import "NSDate+Extensions.h"
 #import "UIImage+Extensions.h"
 #import "UIColor+Extensions.h"
