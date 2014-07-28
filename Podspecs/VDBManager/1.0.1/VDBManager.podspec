@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => 'https://github.com/heyuan110/PodsRepertory.git' }
   s.source_files  = "Source/VDBManager/*.{h,m}"
 # s.frameworks = "MapKit", "CoreLocation"
-#  s.libraries = "libsqlite3"
+  s.libraries = "libsqlite3"
   s.requires_arc = true
   s.dependency "VExtensions"
   s.dependency "FMDB"
