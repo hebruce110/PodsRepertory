@@ -83,6 +83,20 @@
               initCompression:(CGFloat)compression
                       maxSize:(int64_t)size;
 
+
+/**
+ *	@brief	merge two images at special zoom
+ *
+ *	@param 	incoming 	to be merged image
+ *	@param 	original 	original image
+ *	@param 	zoom 	rect
+ *
+ *	@return	the merged image
+ */
++ (UIImage *)mergeImage:(UIImage*)incoming
+                toImage:(UIImage*)original
+                 atZoom:(CGRect)zoom;
+
 @end
 
 /*!

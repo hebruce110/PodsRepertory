@@ -45,7 +45,7 @@
  *
  *  @return 返回正方形图片(400x400)pixels
  */
-- (UIImage *)thumbSize:(CGFloat)newSize {
+- (UIImage *)createThumbImage:(CGFloat)newSize {
     CGAffineTransform scaleTransform;
     CGPoint origin;
     
@@ -259,6 +259,19 @@
     CGContextRelease(ctx);
     CGImageRelease(cgimg);
     return img;
+}
+
++ (UIImage*)mergeImage:(UIImage*)incoming
+               toImage:(UIImage*)original
+                atZoom:(CGRect)zoom{
+    //support for retina
+    UIGraphicsBeginImageContextWithOptions(original.size,NO,0.0f);
+    [original drawInRect:CGRectMake(0, 0, original.size.width, original.size.height)];
+    [incoming drawInRect:zoom];
+    UIImage *resultImage=UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return resultImage;
 }
 
 @end
