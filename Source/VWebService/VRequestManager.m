@@ -142,7 +142,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
         if (isValidString(action)){
             parameters[kResquestParameterAction] = action;
         }
-        urlString = [[NSURL URLWithString:nil relativeToURL:self.baseURL] absoluteString];
+        urlString = [[NSURL URLWithString:@"" relativeToURL:self.baseURL] absoluteString];
     }
     
     //如果最后一个是/就去掉
