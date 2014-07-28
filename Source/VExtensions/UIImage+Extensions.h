@@ -20,13 +20,23 @@
 - (UIImage*)resizedImage:(CGRect)rect;
 
 /**
- *  创建图片的缩略图
+ *  创建图片的缩略图，正方形
  *
- *  @param maxThumbSize 缩略图大小
+ *  @param thumbSize 缩略图大小
  *
  *  @return 缩略图
  */
-- (UIImage *)createThumbImage:(CGSize)maxThumbSize;
+- (UIImage *)createThumbImage:(CGSize)thumbSize;
+
+
+/**
+ *  创建缩略图，和原来图片是相同比例的
+ *
+ *  @param maxThumbSize 尺寸
+ *
+ *  @return 缩略图
+ */
+- (UIImage *)createScaleThumbImage:(CGSize)maxThumbSize;
 
 /*!
  *  @brief Resized image by given size.
