@@ -12,10 +12,11 @@
 //request parameter key
 static NSString *const kResquestParameter            = @"p";
 static NSString *const kResquestParameterSignature   = @"sign";
+static NSString *const kResquestParameterAction      = @"action";
 
-static NSString *const kAppInfoPlatform             = @"plat";
-static NSString *const kAppInfoVersion              = @"version";
-static NSString *const kAppInfoScreenSize           = @"screensize";
+static NSString *const kAppInfoPlatform              = @"plat";
+static NSString *const kAppInfoVersion               = @"version";
+static NSString *const kAppInfoScreenSize            = @"screensize";
 
 //response json key
 static NSString *const kResponseParameterStatus      = @"status";
@@ -65,6 +66,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     _webserviceURL = url.absoluteString;
     _isAgreedParameterFormat = YES;
     _isAgreedResponseContentFormat = YES;
+    _isRestfulFormatActionParameter = YES;
     
     //add app info to request header
     [self.requestSerializer setValue:kAppVersion forHTTPHeaderField:kAppInfoVersion];
@@ -127,12 +129,24 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
 
 - (void)requstMethord:(NSString *)methord
                action:(NSString *)action
-            parameter:(NSDictionary *)parameters
+            parameter:(NSDictionary *)_parameters
         callbackBlock:(RequestCallBackBlock)block
 {
     action = FormatString(action,@"");
-    NSString *urlString = [[NSURL URLWithString:action relativeToURL:self.baseURL] absoluteString];
-    if (urlString.length>0 && [[urlString substringFromIndex:urlString.length-1] isEqualToString:@"/"]) { //如果最后一个是/就去掉
+    
+    NSString *urlString;
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:_parameters];
+    if (_isRestfulFormatActionParameter) {
+        urlString = [[NSURL URLWithString:action relativeToURL:self.baseURL] absoluteString];
+    }else {
+        if (isValidString(action)){
+            parameters[kResquestParameterAction] = action;
+        }
+        urlString = [[NSURL URLWithString:nil relativeToURL:self.baseURL] absoluteString];
+    }
+    
+    //如果最后一个是/就去掉
+    if (urlString.length>0 && [[urlString substringFromIndex:urlString.length-1] isEqualToString:@"/"]) {
         urlString = [urlString substringToIndex:urlString.length-1];
     }
     

@@ -57,6 +57,13 @@
 + (void)setIsAgreedResponseContentFormat:(BOOL)isAgreed;
 
 /**
+ *  请求的action是否是restful格式,restful风格是比如http://api.demo.com/user/action 如果不是就是http://api.demo.com/user?action=login
+ *
+ *  @param isRestful 是否是restful格式
+ */
++ (void)setIsRestfulFormatActionParameter:(BOOL)isRestful;
+
+/**
  *  设置一些通用的参数到请求里，所有的接口都会带上这些参数，比如userid，token等，请传入字典格式
  *
  *  @param dict

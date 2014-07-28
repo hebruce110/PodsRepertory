@@ -26,6 +26,7 @@ typedef void (^RequestCallBackBlock)(id result,BOOL status,NSError *error);
 
 @property(nonatomic)BOOL isAgreedParameterFormat;   //是否是按照约定的请求参数格式
 @property(nonatomic)BOOL isAgreedResponseContentFormat; //服务端是否是按照约定的格式返回数据
+@property(nonatomic)BOOL isRestfulFormatActionParameter; //是否是按Restful路径风格传输action参数
 
 + (instancetype )sharedInstance;
 

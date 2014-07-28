@@ -34,6 +34,13 @@
     }
 }
 
++ (void)setIsRestfulFormatActionParameter:(BOOL)isRestful
+{
+    if (isValidString([[NSUserDefaults standardUserDefaults]valueForKey:kWebServiceURL])) {
+        [[VRequestManager sharedInstance]setIsRestfulFormatActionParameter:isRestful];
+    }
+}
+
 + (void)setAdditionParameters:(NSDictionary *)parameters
 {
     if (isValidDictionary(parameters)) {
