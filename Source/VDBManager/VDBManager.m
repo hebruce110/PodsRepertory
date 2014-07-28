@@ -65,13 +65,13 @@
     return nil;
 }
 
-+ (NSString *)generateCreateTableSql:(Class)class
++ (NSString *)generateCreateTableSql:(Class)_class
                          integerkeys:(NSArray *)integerkeys
                           primaryKey:(NSString *)primaryKey
 {
     NSMutableString *sql = [[NSMutableString alloc] init];
-    NSArray *propertys = [self getPropertyList:class];
-    [sql appendFormat:@"create table %@ (",NSStringFromClass(class)] ;
+    NSArray *propertys = [self getPropertyList:_class];
+    [sql appendFormat:@"create table %@ (",NSStringFromClass(_class)] ;
     NSInteger i = 0;
     for (NSString *key in propertys) {
         if (i>0)[sql appendString:@","];
@@ -94,11 +94,11 @@
     return sql;
 }
 
-+ (NSString *)generateCreateTableSql:(Class)class
++ (NSString *)generateCreateTableSql:(Class)_class
 {
     NSMutableString *sql = [[NSMutableString alloc] init];
-    NSArray *propertys = [self getPropertyList:class];
-    [sql appendFormat:@"create table %@ (",NSStringFromClass(class)] ;
+    NSArray *propertys = [self getPropertyList:_class];
+    [sql appendFormat:@"create table %@ (",NSStringFromClass(_class)] ;
     NSInteger i = 0;
     for (NSString *key in propertys) {
         if (i>0) {

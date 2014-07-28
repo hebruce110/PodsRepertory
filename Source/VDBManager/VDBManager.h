@@ -40,10 +40,10 @@ static NSString * const kDBName                  = @"datas";
 /*******************生成sql语句 Start*********************/
 
 //生成create语句，可以定义integer类型
-+ (NSString *)generateCreateTableSql:(Class)class integerkeys:(NSArray *)integerkeys primaryKey:(NSString *)primaryKey;
++ (NSString *)generateCreateTableSql:(Class)_class integerkeys:(NSArray *)integerkeys primaryKey:(NSString *)primaryKey;
 
 //生成create语句，全部都是text类型
-+ (NSString *)generateCreateTableSql:(Class)class;
++ (NSString *)generateCreateTableSql:(Class)_class;
 
 //生成insert语句
 + (NSString *)generateInsertSql:(NSString *)tablename
