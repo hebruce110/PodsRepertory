@@ -436,7 +436,7 @@
 						<key>name</key>
 						<string>长宁区</string>
 						<key>pinyin</key>
-						<string>zhangningqu</string>
+						<string>changningqu</string>
 						<key>sort</key>
 						<string>4</string>
 					</dict>
@@ -762,7 +762,7 @@
 						<key>name</key>
 						<string>长寿区</string>
 						<key>pinyin</key>
-						<string>zhangshouqu</string>
+						<string>changshouqu</string>
 						<key>sort</key>
 						<string>15</string>
 					</dict>
@@ -1048,7 +1048,7 @@
 						<key>name</key>
 						<string>长安区</string>
 						<key>pinyin</key>
-						<string>zhanganqu</string>
+						<string>changanqu</string>
 						<key>sort</key>
 						<string>1</string>
 					</dict>
@@ -3309,7 +3309,7 @@ shaheshi</string>
 						<key>name</key>
 						<string>长治县</string>
 						<key>pinyin</key>
-						<string>zhangzhixian</string>
+						<string>changzhixian</string>
 						<key>sort</key>
 						<string>3</string>
 					</dict>
@@ -3371,7 +3371,7 @@ pingshunxian</string>
 						<key>name</key>
 						<string>长子县</string>
 						<key>pinyin</key>
-						<string>zhangzixian</string>
+						<string>changzixian</string>
 						<key>sort</key>
 						<string>9</string>
 					</dict>
@@ -3421,7 +3421,7 @@ pingshunxian</string>
 				<key>name</key>
 				<string>长治市</string>
 				<key>pinyin</key>
-				<string>zhangzhishi</string>
+				<string>changzhishi</string>
 				<key>sort</key>
 				<string>3</string>
 			</dict>
@@ -5720,7 +5720,7 @@ pingshunxian</string>
 						<key>name</key>
 						<string>长海县</string>
 						<key>pinyin</key>
-						<string>zhanghaixian</string>
+						<string>changhaixian</string>
 						<key>sort</key>
 						<string>7</string>
 					</dict>
@@ -6354,7 +6354,7 @@ pingshunxian</string>
 						<key>name</key>
 						<string>弓长岭区</string>
 						<key>pinyin</key>
-						<string>gongzhanglingqu</string>
+						<string>gongchanglingqu</string>
 						<key>sort</key>
 						<string>4</string>
 					</dict>
@@ -6812,7 +6812,7 @@ pingshunxian</string>
 				<key>name</key>
 				<string>长春市</string>
 				<key>pinyin</key>
-				<string>zhangchunshi</string>
+				<string>changchunshi</string>
 				<key>sort</key>
 				<string>0</string>
 			</dict>
@@ -7177,7 +7177,7 @@ pingshunxian</string>
 						<key>name</key>
 						<string>长白朝鲜族自治县</string>
 						<key>pinyin</key>
-						<string>zhangbaichaoxianzuzizhixian</string>
+						<string>changbaichaoxianzuzizhixian</string>
 						<key>sort</key>
 						<string>5</string>
 					</dict>
@@ -7230,7 +7230,7 @@ pingshunxian</string>
 						<key>name</key>
 						<string>长岭县</string>
 						<key>pinyin</key>
-						<string>zhanglingxian</string>
+						<string>changlingxian</string>
 						<key>sort</key>
 						<string>3</string>
 					</dict>
@@ -9163,7 +9163,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>南长区</string>
 						<key>pinyin</key>
-						<string>nanzhangqu</string>
+						<string>nanchangqu</string>
 						<key>sort</key>
 						<string>2</string>
 					</dict>
@@ -10754,7 +10754,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长兴县</string>
 						<key>pinyin</key>
-						<string>zhangxingxian</string>
+						<string>changxingxian</string>
 						<key>sort</key>
 						<string>4</string>
 					</dict>
@@ -11348,7 +11348,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长丰县</string>
 						<key>pinyin</key>
-						<string>zhangfengxian</string>
+						<string>changfengxian</string>
 						<key>sort</key>
 						<string>5</string>
 					</dict>
@@ -12055,7 +12055,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>天长市</string>
 						<key>pinyin</key>
-						<string>tianzhangshi</string>
+						<string>tianchangshi</string>
 						<key>sort</key>
 						<string>7</string>
 					</dict>
@@ -12712,7 +12712,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长乐市</string>
 						<key>pinyin</key>
-						<string>zhangleshi</string>
+						<string>changleshi</string>
 						<key>sort</key>
 						<string>13</string>
 					</dict>
@@ -13187,7 +13187,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长泰县</string>
 						<key>pinyin</key>
-						<string>zhangtaixian</string>
+						<string>changtaixian</string>
 						<key>sort</key>
 						<string>6</string>
 					</dict>
@@ -13383,7 +13383,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长汀县</string>
 						<key>pinyin</key>
-						<string>zhangtingxian</string>
+						<string>changtingxian</string>
 						<key>sort</key>
 						<string>2</string>
 					</dict>
@@ -14768,7 +14768,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长清区</string>
 						<key>pinyin</key>
-						<string>zhangqingqu</string>
+						<string>changqingqu</string>
 						<key>sort</key>
 						<string>6</string>
 					</dict>
@@ -15233,7 +15233,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长岛县</string>
 						<key>pinyin</key>
-						<string>zhangdaoxian</string>
+						<string>changdaoxian</string>
 						<key>sort</key>
 						<string>5</string>
 					</dict>
@@ -17130,7 +17130,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长垣县</string>
 						<key>pinyin</key>
-						<string>zhangyuanxian</string>
+						<string>changyuanxian</string>
 						<key>sort</key>
 						<string>10</string>
 					</dict>
@@ -17409,7 +17409,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长葛市</string>
 						<key>pinyin</key>
-						<string>zhanggeshi</string>
+						<string>changgeshi</string>
 						<key>sort</key>
 						<string>6</string>
 					</dict>
@@ -18578,7 +18578,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长阳土家族自治县</string>
 						<key>pinyin</key>
-						<string>zhangyangtujiazuzizhixian</string>
+						<string>changyangtujiazuzizhixian</string>
 						<key>sort</key>
 						<string>9</string>
 					</dict>
@@ -22823,7 +22823,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长洲区</string>
 						<key>pinyin</key>
-						<string>zhangzhouqu</string>
+						<string>changzhouqu</string>
 						<key>sort</key>
 						<string>3</string>
 					</dict>
@@ -25308,7 +25308,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长宁县</string>
 						<key>pinyin</key>
-						<string>zhangningxian</string>
+						<string>changningxian</string>
 						<key>sort</key>
 						<string>5</string>
 					</dict>
@@ -27202,7 +27202,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长顺县</string>
 						<key>pinyin</key>
-						<string>zhangshunxian</string>
+						<string>changshunxian</string>
 						<key>sort</key>
 						<string>9</string>
 					</dict>
@@ -29693,7 +29693,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长安区</string>
 						<key>pinyin</key>
-						<string>zhanganqu</string>
+						<string>changanqu</string>
 						<key>sort</key>
 						<string>9</string>
 					</dict>
@@ -30032,7 +30032,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长武县</string>
 						<key>pinyin</key>
-						<string>zhangwuxian</string>
+						<string>changwuxian</string>
 						<key>sort</key>
 						<string>10</string>
 					</dict>
@@ -30228,7 +30228,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>延长县</string>
 						<key>pinyin</key>
-						<string>yanzhangxian</string>
+						<string>yanchangxian</string>
 						<key>sort</key>
 						<string>2</string>
 					</dict>
@@ -30248,7 +30248,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>子长县</string>
 						<key>pinyin</key>
-						<string>zizhangxian</string>
+						<string>zichangxian</string>
 						<key>sort</key>
 						<string>4</string>
 					</dict>
