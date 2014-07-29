@@ -8,7 +8,8 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://weibo.com/heyuan110"
   s.platform     = :ios, "5.0"
   s.source       = { :git => 'https://github.com/heyuan110/PodsRepertory.git' }
-  s.source_files  = "Source/VRegionList/*.{h,m}"
+  s.source_files = "Source/VRegionList/*.{h,m}"
+  s.resources    = "Source/VRegionList/*.{plist,txt}"
   s.requires_arc = true
   s.dependency "VExtensions"
 end
