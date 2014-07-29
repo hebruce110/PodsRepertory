@@ -26,7 +26,7 @@
  *
  *  @return 缩略图
  */
-- (UIImage *)createThumbImage:(CGSize)thumbSize;
+- (UIImage *)createThumbImage:(CGFloat)thumbSize;
 
 
 /**
