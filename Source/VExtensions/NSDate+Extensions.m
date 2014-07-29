@@ -482,6 +482,15 @@
     return numberOfDaysInMonth-day;
 }
 
-
++ (NSInteger)monthDays:(NSInteger)month
+{
+    NSCalendar* cal = [NSCalendar currentCalendar];
+    NSDateComponents* comps = [[NSDateComponents alloc] init];
+    [comps setMonth:month];
+    NSRange range = [cal rangeOfUnit:NSDayCalendarUnit
+                              inUnit:NSMonthCalendarUnit
+                             forDate:[cal dateFromComponents:comps]];
+    return range.length;
+}
 
 @end

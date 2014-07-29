@@ -86,6 +86,9 @@
 - (NSDate *) monthDateFromDate;
 - (NSDate *) monthDayDateFromDate;
 
+//返回month月的总天数
++ (NSInteger)monthDays:(NSInteger)month;
+
 // Decomposing dates
 @property (readonly) NSInteger nearestHour;
 @property (readonly) NSInteger hour;
