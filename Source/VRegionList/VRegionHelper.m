@@ -26,6 +26,23 @@
 
 #pragma mark Public Methord
 
+
+- (NSArray *)searchCityWithKey:(NSString *)key
+{
+    NSMutableArray *result = [[NSMutableArray alloc]init];
+    if (!isValidString(key))return result;
+    NSArray *allProvince = [self getAllRelationShipRegion];
+    for (VProvince *province in allProvince) {
+        NSArray *citys = province.citys;
+        for (VCity *city in citys) {
+            if ([city.pinyin hasPrefix:key] || [city.name hasPrefix:key]) {
+                [result addObject:city];
+            }
+        }
+    }
+    return result;
+}
+
 - (NSArray *)getAllRelationShipRegion
 {
     NSMutableArray *allProvince = [[NSMutableArray alloc]init];

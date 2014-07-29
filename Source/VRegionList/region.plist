@@ -19493,7 +19493,7 @@ wuchangshi</string>
 						<key>name</key>
 						<string>长沙县</string>
 						<key>pinyin</key>
-						<string>zhangshaxian</string>
+						<string>changshaxian</string>
 						<key>sort</key>
 						<string>6</string>
 					</dict>
@@ -19533,7 +19533,7 @@ wuchangshi</string>
 				<key>name</key>
 				<string>长沙市</string>
 				<key>pinyin</key>
-				<string>zhangshashi</string>
+				<string>changshashi</string>
 				<key>sort</key>
 				<string>0</string>
 			</dict>
