@@ -86,9 +86,6 @@
 - (NSDate *) monthDateFromDate;
 - (NSDate *) monthDayDateFromDate;
 
-//返回month月的总天数
-+ (NSInteger)monthDays:(NSInteger)month;
-
 //上个月
 - (NSDate *)lastMonth;
 
@@ -101,6 +98,7 @@
 //当前月的下个月
 + (NSDate *)nextMonth;
 
+//返回month月的总天数
 + (NSInteger)monthDays:(NSInteger)month
                   year:(NSInteger)year;
 
