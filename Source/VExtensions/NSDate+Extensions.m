@@ -493,4 +493,34 @@
     return range.length;
 }
 
+- (NSDate *)nextMonth
+{
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components=[[NSDateComponents alloc] init];
+    components.month=1;//next month
+    NSDate *month=[calendar dateByAddingComponents:components toDate:self options:0];
+    return month;
+}
+
+- (NSDate *)lastMonth
+{
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *components=[[NSDateComponents alloc] init];
+    components.month=-1;//last month
+    NSDate *month=[calendar dateByAddingComponents:components toDate:self options:0];
+    return month;
+}
+
+//当前月份的上个月
++ (NSDate *)lastMonth
+{
+    return [[NSDate date]lastMonth];
+}
+
+//当前月的下个月
++ (NSDate *)nextMonth
+{
+    return [[NSDate date]nextMonth];
+}
+
 @end
