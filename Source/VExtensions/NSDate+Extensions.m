@@ -483,10 +483,12 @@
 }
 
 + (NSInteger)monthDays:(NSInteger)month
+                  year:(NSInteger)year
 {
     NSCalendar* cal = [NSCalendar currentCalendar];
     NSDateComponents* comps = [[NSDateComponents alloc] init];
     [comps setMonth:month];
+    [comps setYear:year];
     NSRange range = [cal rangeOfUnit:NSDayCalendarUnit
                               inUnit:NSMonthCalendarUnit
                              forDate:[cal dateFromComponents:comps]];

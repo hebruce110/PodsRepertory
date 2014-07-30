@@ -101,6 +101,9 @@
 //当前月的下个月
 + (NSDate *)nextMonth;
 
++ (NSInteger)monthDays:(NSInteger)month
+                  year:(NSInteger)year;
+
 // Decomposing dates
 @property (readonly) NSInteger nearestHour;
 @property (readonly) NSInteger hour;
