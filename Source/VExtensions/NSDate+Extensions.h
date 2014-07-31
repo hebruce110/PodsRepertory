@@ -56,8 +56,11 @@
 - (BOOL) isThisYear;
 - (BOOL) isNextYear;
 - (BOOL) isLastYear;
-- (BOOL) isEarlierThanDate: (NSDate *) aDate;
-- (BOOL) isLaterThanDate: (NSDate *) aDate;
+- (BOOL) isEarlierThanDate: (NSDate *) aDate; //<
+- (BOOL) isLaterThanDate: (NSDate *) aDate; //>
+- (BOOL) isEarlierOrEqualDate: (NSDate *) aDate;//<=
+- (BOOL) isEqualDate:(NSDate *)date;//=
+- (BOOL) isLaterOrEqualDate: (NSDate *) aDate;//>=
 - (BOOL) isInFuture;
 - (BOOL) isInPast;
 
@@ -101,6 +104,12 @@
 //返回month月的总天数
 + (NSInteger)monthDays:(NSInteger)month
                   year:(NSInteger)year;
+
+- (NSDate *)setYear:(NSInteger)year;
+
+- (NSDate *)setDay:(NSInteger)day;
+
+- (NSDate *)setMonth:(NSInteger)month;
 
 // Decomposing dates
 @property (readonly) NSInteger nearestHour;

@@ -217,9 +217,27 @@
 	return ([self compare:aDate] == NSOrderedAscending);
 }
 
+
+- (BOOL) isEarlierOrEqualDate: (NSDate *) aDate
+{
+	return ([self compare:aDate] == NSOrderedAscending || [self compare:aDate] == NSOrderedSame);
+}
+
+
 - (BOOL) isLaterThanDate: (NSDate *) aDate
 {
 	return ([self compare:aDate] == NSOrderedDescending);
+}
+
+- (BOOL) isLaterOrEqualDate: (NSDate *) aDate
+{
+	return ([self compare:aDate] == NSOrderedDescending || [self compare:aDate] == NSOrderedSame);
+}
+
+
+- (BOOL) isEqualDate:(NSDate *)date
+{
+    return [self isEqualToDate:date];
 }
 
 // Thanks, markrickert
@@ -414,6 +432,40 @@
 	NSDateComponents *components = [CURRENT_CALENDAR components:DATE_COMPONENTS fromDate:self];
 	return components.year;
 }
+
+- (NSDate *)setYear:(NSInteger)year
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
+    [dateComponents setDay:self.day];
+    [dateComponents setMonth:self.month];
+    [dateComponents setYear:year];
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    return  date;
+}
+
+- (NSDate *)setMonth:(NSInteger)month
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
+    [dateComponents setDay:self.day];
+    [dateComponents setMonth:month];
+    [dateComponents setYear:self.year];
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    return  date;
+}
+
+- (NSDate *)setDay:(NSInteger)day
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
+    [dateComponents setDay:day];
+    [dateComponents setMonth:self.month];
+    [dateComponents setYear:self.year];
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    return  date;
+}
+
 
 //2014-04
 - (NSDate *)monthDateFromDate{
