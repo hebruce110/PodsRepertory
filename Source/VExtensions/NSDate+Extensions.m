@@ -435,10 +435,8 @@
 
 - (NSDate *)setYear:(NSInteger)year
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
-    [dateComponents setDay:self.day];
-    [dateComponents setMonth:self.month];
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit |NSMonthCalendarUnit |NSDayCalendarUnit |NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self];
     [dateComponents setYear:year];
     NSDate *date = [calendar dateFromComponents:dateComponents];
     return  date;
@@ -446,24 +444,68 @@
 
 - (NSDate *)setMonth:(NSInteger)month
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
-    [dateComponents setDay:self.day];
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit |NSMonthCalendarUnit |NSDayCalendarUnit |NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self];
     [dateComponents setMonth:month];
-    [dateComponents setYear:self.year];
     NSDate *date = [calendar dateFromComponents:dateComponents];
     return  date;
 }
 
 - (NSDate *)setDay:(NSInteger)day
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:[NSDate date]];
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit |NSMonthCalendarUnit |NSDayCalendarUnit |NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self];
     [dateComponents setDay:day];
-    [dateComponents setMonth:self.month];
-    [dateComponents setYear:self.year];
     NSDate *date = [calendar dateFromComponents:dateComponents];
     return  date;
+}
+
+- (NSDate *)setHour:(NSInteger)hour
+{
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit |NSMonthCalendarUnit |NSDayCalendarUnit |NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self];
+    [dateComponents setHour:hour];
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    return  date;
+}
+
+- (NSDate *)setMinute:(NSInteger)minute
+{
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit |NSMonthCalendarUnit |NSDayCalendarUnit |NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self];
+    [dateComponents setMinute:minute];
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    return date;
+}
+
+- (NSDate *)setSecond:(NSInteger)second
+{
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit |NSMonthCalendarUnit |NSDayCalendarUnit |NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self];
+    [dateComponents setSecond:second];
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    return date;
+}
+
+- (NSDate *)setHour:(NSInteger)hour minute:(NSInteger)minute
+{
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit |NSMonthCalendarUnit |NSDayCalendarUnit |NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self];
+    [dateComponents setHour:hour];
+    [dateComponents setMinute:minute];
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    return date;
+}
+
+- (NSDate *)setHour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second
+{
+    NSCalendar *calendar=[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *dateComponents = [calendar components:(NSYearCalendarUnit |NSMonthCalendarUnit |NSDayCalendarUnit |NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self];
+    [dateComponents setHour:hour];
+    [dateComponents setMinute:minute];
+    [dateComponents setSecond:second];
+    NSDate *date = [calendar dateFromComponents:dateComponents];
+    return date;
 }
 
 

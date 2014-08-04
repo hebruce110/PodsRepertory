@@ -111,6 +111,16 @@
 
 - (NSDate *)setMonth:(NSInteger)month;
 
+- (NSDate *)setHour:(NSInteger)hour;
+
+- (NSDate *)setMinute:(NSInteger)minute;
+
+- (NSDate *)setSecond:(NSInteger)second;
+
+- (NSDate *)setHour:(NSInteger)hour minute:(NSInteger)minute;
+
+- (NSDate *)setHour:(NSInteger)hour minute:(NSInteger)minute second:(NSInteger)second;
+
 // Decomposing dates
 @property (readonly) NSInteger nearestHour;
 @property (readonly) NSInteger hour;
