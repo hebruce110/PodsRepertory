@@ -29,21 +29,21 @@
 
 + (void)setIsAgreedParameterFormat:(BOOL)isAgreed
 {
-    if (isValidString([[NSUserDefaults standardUserDefaults]valueForKey:kWebServiceURL])) {
+    if (isValidString([[NSUserDefaults standardUserDefaults]objectForKey:kWebServiceURL])) {
         [[VRequestManager sharedInstance]setIsAgreedParameterFormat:isAgreed];
     }
 }
 
 + (void)setIsAgreedResponseContentFormat:(BOOL)isAgreed
 {
-    if (isValidString([[NSUserDefaults standardUserDefaults]valueForKey:kWebServiceURL])) {
+    if (isValidString([[NSUserDefaults standardUserDefaults]objectForKey:kWebServiceURL])) {
         [[VRequestManager sharedInstance]setIsAgreedResponseContentFormat:isAgreed];
     }
 }
 
 + (void)setIsRestfulFormatActionParameter:(BOOL)isRestful
 {
-    if (isValidString([[NSUserDefaults standardUserDefaults]valueForKey:kWebServiceURL])) {
+    if (isValidString([[NSUserDefaults standardUserDefaults]objectForKey:kWebServiceURL])) {
         [[VRequestManager sharedInstance]setIsRestfulFormatActionParameter:isRestful];
     }
 }
@@ -52,7 +52,7 @@
 {
     if (isValidDictionary(parameters)) {
         [[NSUserDefaults standardUserDefaults] setObject:parameters forKey:kAdditionParameters];
-    }{
+    }else{
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:kAdditionParameters];
     }
     [[NSUserDefaults standardUserDefaults]synchronize];

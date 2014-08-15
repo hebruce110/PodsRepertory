@@ -41,7 +41,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     static id sharedInstance = nil;
     static dispatch_once_t onceSingleton;
     dispatch_once(&onceSingleton, ^{
-        NSString *url = [[NSUserDefaults standardUserDefaults]valueForKey:kWebServiceURL];
+        NSString *url = [[NSUserDefaults standardUserDefaults]objectForKey:kWebServiceURL];
         if (!isValidString(url)) {
             HYLog(@"#######error: please configure webservice url######");
             url = @"";
@@ -80,7 +80,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
 //读取程序设置的校验码
 - (NSString *)getSignatureCode
 {
-    NSString *code =  [[NSUserDefaults standardUserDefaults]valueForKey:kSignatureCode];
+    NSString *code =  [[NSUserDefaults standardUserDefaults]objectForKey:kSignatureCode];
     if (!isValidString(code)) {
         return kSignatureDefaultCode;
     }
@@ -91,7 +91,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
 - (NSDictionary *)getAdditionParameters
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *parameters = [userDefaults valueForKey:kAdditionParameters];
+    NSDictionary *parameters = [userDefaults objectForKey:kAdditionParameters];
     if (isValidDictionary(parameters)) {
         return parameters;
     }
