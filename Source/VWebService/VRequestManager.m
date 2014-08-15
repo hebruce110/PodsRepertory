@@ -72,7 +72,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     [self.requestSerializer setValue:kAppVersion forHTTPHeaderField:kAppInfoVersion];
     [self.requestSerializer setValue:@"ios" forHTTPHeaderField:kAppInfoPlatform];
     [self.requestSerializer setValue:[NSString stringWithFormat:@"%.fx%.f",[UIScreen mainScreen].bounds.size.width,[UIScreen mainScreen].bounds.size.height] forHTTPHeaderField:kAppInfoScreenSize];
-
+    
     return self;
 }
 
@@ -127,6 +127,8 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     return @{kResquestParameter:parametersJsonString};
 }
 
+
+
 - (void)requstMethord:(NSString *)methord
                action:(NSString *)action
             parameter:(NSDictionary *)_parameters
@@ -152,12 +154,25 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     
     //如果请求不是按照约定的格式，那么就会按正常的request的格式去请求，不进行校验等.
     NSDictionary *vars = _isAgreedParameterFormat?[self formatParameters:parameters]:parameters;
-
-    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:methord URLString:urlString parameters:vars error:nil];
-    HYLog(@"\nHTTP Request:＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝》\nMethord: %@ %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",methord,[[NSDate date] formatYMDHMS],action,vars,request.URL.absoluteString);
+    
+    NSMutableURLRequest *request;
+    if (_webServiceStyle == WebServiceStyleRaw) {
+        request = [self.requestSerializer requestWithMethod:methord URLString:urlString parameters:nil error:nil];
+        if (isValidDictionary(_parameters)) {
+            //这里读取在项目中设置的基础参数
+            NSMutableDictionary *newParameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+            [newParameters addEntriesFromDictionary:[self getAdditionParameters]];
+            NSString *jsonString = [newParameters toJsonString];
+            [request setHTTPBody: [jsonString dataUsingEncoding:NSUTF8StringEncoding]];
+            HYLog(@"\nHTTP Request:＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝》\nStyle:raw \nMethord: %@ %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",methord,[[NSDate date] formatYMDHMS],action,jsonString,request.URL.absoluteString);
+        }
+    }else {
+        request = [self.requestSerializer requestWithMethod:methord URLString:urlString parameters:vars error:nil];
+        HYLog(@"\nHTTP Request:＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝》\nStyle:form-data \nMethord: %@ %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",methord,[[NSDate date] formatYMDHMS],action,vars,request.URL.absoluteString);
+    }
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                       success:^(AFHTTPRequestOperation *operation, id info){
-                                                                          HYLog(@"\nHTTP Response:《＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\nMethord: %@ %@ \nStatus: %d \nAction: %@ \nParameters: %@ \nurl: %@ \nContent:\n%@",request.HTTPMethod,[[NSDate date] formatYMDHMS],operation.response.statusCode,action,vars,request.URL.absoluteString,info);
+                                                                          HYLog(@"\nHTTP Response:《＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\nMethord: %@ %@ \nStatus: %d \nAction: %@\nContent:\n%@",request.HTTPMethod,[[NSDate date] formatYMDHMS],operation.response.statusCode,request.URL.absoluteString,info);
                                                                           [self handleRequest:operation result:info status:YES callbackBlock:block];
                                                                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                                                           HYLog(@"\nHTTP Response:《＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\nMethord: %@ %@ \nStatus: %d \nError:%d %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",request.HTTPMethod,[[NSDate date] formatYMDHMS],operation.response.statusCode,error.code,error.localizedDescription,action,vars,request.URL.absoluteString);
@@ -227,7 +242,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
 - (NSError *)createError:(NSInteger)errorCode
              description:(NSString *)errorDescription
 {
-
+    
     if (errorCode == 0 || errorCode == 200)return nil;
     if (![VWebService isConnected])errorCode = -1000;
     if (!isValidString(errorDescription)) {

@@ -15,9 +15,16 @@
 {
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     [[NSUserDefaults standardUserDefaults]setObject:url forKey:kWebServiceURL];
-    [[NSUserDefaults standardUserDefaults]setObject:code forKey:kSignatureCode];
+    if (isValidString(code)) {
+        [[NSUserDefaults standardUserDefaults]setObject:code forKey:kSignatureCode];
+    }
     [[NSUserDefaults standardUserDefaults]synchronize];
     [[VRequestManager sharedInstance]initErrorCodes];
+}
+
++ (void)setWebServiceStyle:(WebServiceStyle)style
+{
+    [[VRequestManager sharedInstance]setWebServiceStyle:style];
 }
 
 + (void)setIsAgreedParameterFormat:(BOOL)isAgreed

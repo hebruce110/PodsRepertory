@@ -36,6 +36,13 @@
     signatureCode:(NSString *)code;
 
 /**
+ *  这只请求的方式，目前只支持常用的form-data格式和raw格式,默认是form-data格式
+ *
+ *  @param style
+ */
++ (void)setWebServiceStyle:(WebServiceStyle)style;
+
+/**
  *  设置超时时间
  *
  *  @param timeOut 超时时间
