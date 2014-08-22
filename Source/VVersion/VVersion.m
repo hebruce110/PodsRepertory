@@ -32,14 +32,16 @@
     return nil;
 }
 
-+ (void)check:(NSString *)appId
++ (void)check:(NSString *)appId finished:(void(^)(BOOL isUpdated))block
 {
     if (!isValidString(appId)) {
+        block(NO);
         return;
     }
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         NSDictionary *result = [self getURL:[CheckAppVersionURL stringByAppendingString:appId]];
         dispatch_sync(dispatch_get_main_queue(), ^{
+            BOOL _isUpdated = NO;
             NSLog(@"JSON: %@", result);
             if (isValidDictionary(result)) {
                 NSArray *array=[result objectForKey:@"results"];
@@ -52,6 +54,7 @@
                             float versionFloat=[version floatValue];
                             float currentVersionFloat=[kAppVersion floatValue];
                             if (versionFloat>currentVersionFloat) {
+                                _isUpdated = YES;
                                 NSString *title = [NSString stringWithFormat:@"检测到新版本%@",version];
                                 [UIAlertView showAlertViewWithTitle:title
                                                             message:FormatString(description,@"")
@@ -69,6 +72,7 @@
                     }
                 }
             }
+            block(_isUpdated);
         });
     });
 }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "VVersion"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "根据AppId检测新版本并提示用户更新"
   s.homepage     = "http://www.heyuan110.com"
   s.license      = "MIT"

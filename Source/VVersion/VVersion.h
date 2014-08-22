@@ -15,8 +15,11 @@
  *  检查新版本
  *
  *  @param appId appstore的应用id号，例如684198097
+ *  @param block 回调，返回yes表示有新版本，否则没有
  */
-+ (void)check:(NSString *)appId;
+
++ (void)check:(NSString *)appId
+     finished:(void(^)(BOOL isFinished))block;
 
 
 @end
