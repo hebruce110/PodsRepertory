@@ -86,7 +86,7 @@
                 NSArray *citys = info[@"citys"];
                 if (isValidArray(citys)) {
                     NSMutableArray *results = [[NSMutableArray alloc]init];
-                    for (NSDictionary *info in _allDatas) {
+                    for (NSDictionary *info in citys) {
                         VCity *c = [[VCity alloc]init];
                         c.name   = info[@"name"];
                         c.cid    = info[@"id"];
@@ -115,7 +115,7 @@
                         NSArray *areas = cityinfo[@"areas"];
                         if (isValidArray(areas)) {
                             NSMutableArray *results = [[NSMutableArray alloc]init];
-                            for (NSDictionary *areainfo in _allDatas) {
+                            for (NSDictionary *areainfo in areas) {
                                 VArea *a = [[VArea alloc]init];
                                 a.name   = areainfo[@"name"];
                                 a.aid    = areainfo[@"id"];
