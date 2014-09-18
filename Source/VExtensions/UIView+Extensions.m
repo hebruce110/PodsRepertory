@@ -333,6 +333,12 @@ static CancelBlock _cancelBlock;
         [alert addButtonWithTitle:buttonTitle];
     }
     [alert show];
+    
+    //如果app被进入到后台了，就取消掉alert
+    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification* notification){
+        [alert dismissWithClickedButtonIndex:[alert cancelButtonIndex] animated:NO];
+    }];
+    
     return alert;
 }
 
