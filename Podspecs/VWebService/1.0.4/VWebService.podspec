@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "VWebService"
-  s.version      = "1.0.1"
-  s.summary      = "网络请求模块，方便项目调用，使用的是AFNetworking2.0,\n，增加了更灵活的自定义格式"
+  s.version      = "1.0.4"
+  s.summary      = "网络请求模块，方便项目调用，使用的是AFNetworking2.0,\n，增加了raw和data-form两种请求方式,修改URL"
   s.homepage     = 'https://github.com/heyuan110/PodsRepertory'
   s.license      = "MIT"
   s.author       = 'Yuan'

@@ -162,6 +162,11 @@ SINGLETON_GCD(VGPS)
         _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
         _locationManager.distanceFilter = DEFAULT_DISTANCE_FILTER;
     }
+    // 判斷是否 iOS 8
+    if([_locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        [_locationManager requestAlwaysAuthorization]; // 永久授权
+        [_locationManager requestWhenInUseAuthorization]; //使用中授权
+    }
     [_locationManager startUpdatingLocation];
 }
 

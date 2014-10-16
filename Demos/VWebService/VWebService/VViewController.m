@@ -7,7 +7,7 @@
 //
 
 #import "VViewController.h"
-
+#import "Webservice_Header.h"
 
 @interface VViewController ()
 
@@ -18,9 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [VWebService getRequestAction:nil
-                        parameter:@{@"listId": @"684198097"}
+    [VWebService getRequestAction:kAPIAccoutGetVerifyCode
+                        parameter:@{@"username": @"zengxiaojuan",@"password": @"123456"}
                     callbackBlock:^(id result, BOOL status, NSError *error) {
                         HYLog(@"%@",result);
     }];

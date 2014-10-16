@@ -139,7 +139,8 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     NSString *urlString;
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:_parameters];
     if (_isRestfulFormatActionParameter) {
-        urlString = [[NSURL URLWithString:action relativeToURL:self.baseURL] absoluteString];
+       urlString =  [self.baseURL URLByAppendingPathComponent:action].absoluteString;
+//        urlString = [[NSURL URLWithString:action relativeToURL:self.baseURL] absoluteString];
     }else {
         if (isValidString(action)){
             parameters[kResquestParameterAction] = action;

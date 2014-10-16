@@ -13,7 +13,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [VWebService configURL:@"https://api.heyuan110.com/webservice/format.php" signatureCode:@"3m7GW7qUSoC75W27f"];
+//    http://192.168.1.33/api/account/getverifycode?username=zengxiaojuan&password=1234132
+    [VWebService configURL:@"http://192.168.1.33/api" signatureCode:@"3m7GW7qUSoC75W27f"];
+    [VWebService setIsAgreedParameterFormat:NO];
+    [VWebService setIsRestfulFormatActionParameter:YES];
+    [VWebService setIsAgreedResponseContentFormat:NO];
     return YES;
 }
 							
