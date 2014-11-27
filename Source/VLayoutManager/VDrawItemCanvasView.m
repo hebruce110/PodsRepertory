@@ -7,27 +7,8 @@
 //
 
 #import "VDrawItemCanvasView.h"
-#import "VExtensions.h"
 
 static CGFloat  kDrawItemOutSetOffSetValue = 2.0;
-
-/*
-CGFloat	CGRectMaxX( CGRect rect ){
-	return rect.origin.x + rect.size.width;
-}
-
-CGFloat CGRectMaxY( CGRect rect ){
-	return rect.origin.y + rect.size.height;
-}
-
-CGRect	CGRectOutset( CGRect rect ,CGFloat dx, CGFloat dy){
-	return CGRectMake( floor(rect.origin.x)-dx, floor(rect.origin.y)-dy, floor(rect.size.width)+2*dx, floor(rect.size.height)+2*dy );
-}
-
-BOOL CGRectIsInvalid( CGRect r ){
-	return isnan(r.origin.x) || isnan(r.origin.y) || isnan(r.size.width) || isnan(r.size.height);
-}
-*/
 
 @implementation VDrawItemCanvasView
 
@@ -40,6 +21,7 @@ BOOL CGRectIsInvalid( CGRect r ){
     return self;
 }
 
+
 - (void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
@@ -49,16 +31,29 @@ BOOL CGRectIsInvalid( CGRect r ){
         if ([item isKindOfClass:[VDrawItemText class]] && ![item isKindOfClass:[VDrawItemCoreText class]]) {
             VDrawItemText *textItem = (VDrawItemText *)item;
             if (textItem.userInteractionEnabled && textItem.handleTouch) {
-                CGContextSetFillColorWithColor(context, [UIColor colorWithRed:1.0 green:0 blue:0 alpha:0.05].CGColor);
-                CGContextAddRect(context,CGRectOutset(item.rect, kDrawItemOutSetOffSetValue, 0));
+                CGContextSetFillColorWithColor(context, item.handleTouchColor.CGColor);
+                CGContextAddRect(context,item.rect);
                 CGContextFillPath(context);
             }
             CGContextSetFillColorWithColor(context, textItem.color.CGColor);
-            [textItem.string drawInRect:textItem.rect withFont:textItem.font lineBreakMode:textItem.lineBreakMode];
+            [textItem.string drawInRect:textItem.rect withFont:textItem.font lineBreakMode:textItem.lineBreakMode alignment:textItem.textAlignment];
         }else if([item isKindOfClass:[VDrawItemImage class]]){
             VDrawItemImage *imageItem = (VDrawItemImage *)item;
-            UIImage *image = Image(imageItem.imageName);
-            [image drawAtPoint:imageItem.rect.origin];
+            /*
+             Core Graphics来绘制简单图像，通过UIImage不能访问整个Core Graphics库，但也提供了5个方法来像Core Graphics那样工作：
+             drawAsPatternInRect：在矩形内绘制图像，图像不缩放，必要时将平铺
+             drawAtPoint：在左上角位于CGPoint指定位置开始绘制图像
+             drawAtPoint：blendMode：alpha：drawAtPoint的复杂版本，可以指定图片透明度等
+             drawInRect：在CGRect内绘制图像，并相应的缩放
+             drawInRect：blendMode：alpha：drawInRect的复杂版本
+             */
+            if (imageItem.image) {
+                [imageItem.image drawInRect:imageItem.rect];
+//                [imageItem.image drawAtPoint:imageItem.rect.origin];
+            }else{
+                UIImage *image = PKImage(imageItem.imageName);
+                [image drawInRect:imageItem.rect];
+            }
         }else if([item isKindOfClass:[VDrawItemView class]]){
             VDrawItemView *viewItem = (VDrawItemView *)item;
             CGContextSetFillColorWithColor(context,viewItem.backgroundColor.CGColor);

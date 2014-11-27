@@ -17,6 +17,7 @@
     self = [super init];
     if (self) {
         [self setString:string font:font color:color];
+        self.textAlignment = NSTextAlignmentLeft;
         self.lineBreakMode = NSLineBreakByCharWrapping;
     }
     return self;

@@ -22,6 +22,7 @@
 }
 @property (nonatomic, strong) NSMutableArray *items;
 @property (nonatomic, assign) CGRect rect;
+@property (nonatomic, strong) id info;
 
 //Public methords
 - (void)addItem:(VDrawItem*)item;
