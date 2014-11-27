@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface VDrawItem : NSObject
 @property (nonatomic, assign) CGRect rect;
@@ -18,6 +19,5 @@
 @property (assign) SEL selector;
 @property (nonatomic,assign) id target;
 @property (nonatomic,strong) id info;
-
 @end
 

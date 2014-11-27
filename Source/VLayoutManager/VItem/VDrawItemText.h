@@ -12,7 +12,6 @@
 @property (nonatomic, strong)  NSString *string;
 @property (nonatomic, strong)  UIFont *font;
 @property (nonatomic, strong)  UIColor *color;
-@property (nonatomic) float borderLine;
 @property (nonatomic, assign)  NSLineBreakMode lineBreakMode;
 @property (nonatomic, assign)  NSTextAlignment textAlignment;
 

@@ -18,7 +18,7 @@
 
 - (void)addlayoutInfo:(VLayoutInfo *)layoutInfo insert:(NSUInteger)index;
 
-- (void)addlayoutInfos:(NSArray*)layoutInfos;
+- (void)addlayoutInfos:(VLayoutInfo*)layoutInfo;
 
 - (void)removelayoutInfoAtIndex:(NSInteger)index;
 
