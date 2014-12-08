@@ -24,4 +24,7 @@
 //在需要提醒的地方调用一次
 + (void)remind;
 
+//跳转到AppStore去评论，请用真机测试
++ (void)gotoAppstore;
+
 @end
