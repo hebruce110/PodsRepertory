@@ -187,9 +187,12 @@ highlightedBackgroundImage:(UIImage *)highlightedImage title:(NSString *)title f
 
 @interface UILabel (UILabel_Utils)
 
+-(void)setStrike;
+-(void)setStrikeWithFont:(UIFont *)font strokeColor:(UIColor *)strokeColor;
 +(UILabel *)createLable:(CGRect)rect;
 +(UILabel *)createLable:(CGRect)rect text:(NSString *)text font:(UIFont *)font textColor:(UIColor *)color textAlignment:(NSTextAlignment)textAlignment;
 +(UILabel *)createLable:(CGRect)rect text:(NSString *)text font:(UIFont *)font textColor:(UIColor *)color  textAlignment:(NSTextAlignment)textAlignment shadowColor:(UIColor *)shadowColor shadowOffset:(CGSize)size;
+
 @end
 
 @interface UITextField (UITextField_Utils)

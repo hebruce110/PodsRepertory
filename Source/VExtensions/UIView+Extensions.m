@@ -485,6 +485,23 @@ highlightedBackgroundImage:(UIImage *)highlightedImage
 
 @implementation UILabel (UILabel_Utils)
 
+
+-(void)setStrikeWithFont:(UIFont *)font
+             strokeColor:(UIColor *)strokeColor{
+    NSNumber *strikeSize = [NSNumber numberWithInt:1];
+    NSMutableDictionary *strikeThroughAttribute = [NSMutableDictionary dictionary];
+    [strikeThroughAttribute setObject:strikeSize forKey:NSStrikethroughStyleAttributeName];
+    [strikeThroughAttribute setObject:self.textColor forKey:NSForegroundColorAttributeName];
+    [strikeThroughAttribute setObject:self.font forKey:NSFontAttributeName];
+    [strikeThroughAttribute setObject:strokeColor forKey:NSStrokeColorAttributeName];
+    NSAttributedString* strikeThroughText = [[NSAttributedString alloc] initWithString:self.text attributes:strikeThroughAttribute];
+    self.attributedText = strikeThroughText;
+}
+
+-(void)setStrike{
+    [self setStrikeWithFont:self.font strokeColor:self.textColor];
+}
+
 #pragma mark 创建UILabel
 
 //创建UILabel
