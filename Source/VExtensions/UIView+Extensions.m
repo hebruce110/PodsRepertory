@@ -287,7 +287,7 @@ static CancelBlock _cancelBlock;
 +(void)showAlertTitle:(NSString*)title
               message:(NSString *)msg
 {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:title message:msg delegate:nil cancelButtonTitle:NSLocalizedString(@"确定", nil) otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:title message:msg delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
     [alert show];
 }
 
@@ -295,21 +295,21 @@ static CancelBlock _cancelBlock;
               message:(NSString *)msg
              delegate:(id)d
 {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:title message:msg delegate:nil cancelButtonTitle:NSLocalizedString(@"确定", nil) otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:title message:msg delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
     alert.delegate = d;
     [alert show];
 }
 
 +(void)showAlertTitle:(NSString*)msg
 {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:msg message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"确定", nil) otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:msg message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
     [alert show];
 }
 
 +(void)showAlertTitle:(NSString*)msg
              delegate:(id)d
 {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:msg message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"确定", nil) otherButtonTitles:nil, nil];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:msg message:nil delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil) otherButtonTitles:nil, nil];
     alert.delegate = d;
     [alert show];
 }

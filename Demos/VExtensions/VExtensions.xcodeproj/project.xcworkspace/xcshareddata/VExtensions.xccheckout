@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BACE1598-F651-4B57-8ADE-85AAE868D3AE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VExtensions</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8F220987C739390FB479FC2352D722DEABE6C084</key>
+		<string>https://github.com/heyuan110/PodsRepertory.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Demos/VExtensions/VExtensions.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8F220987C739390FB479FC2352D722DEABE6C084</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/heyuan110/PodsRepertory.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8F220987C739390FB479FC2352D722DEABE6C084</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8F220987C739390FB479FC2352D722DEABE6C084</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PodsRepertory</string>
+		</dict>
+	</array>
+</dict>
+</plist>

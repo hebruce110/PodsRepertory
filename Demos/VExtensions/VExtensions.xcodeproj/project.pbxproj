@@ -18,25 +18,9 @@
 		F704290E194F3D9D0033BDB5 /* UIColor+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F704290D194F3D9D0033BDB5 /* UIColor+Extensions.m */; };
 		F7042914194F3F370033BDB5 /* NSObject+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F7042913194F3F370033BDB5 /* NSObject+Extensions.m */; };
 		F793652D1940E86600A8D0C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F793652C1940E86600A8D0C9 /* Foundation.framework */; };
-		F793653B1940E86600A8D0C9 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F793653A1940E86600A8D0C9 /* XCTest.framework */; };
-		F793653C1940E86600A8D0C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F793652C1940E86600A8D0C9 /* Foundation.framework */; };
-		F793653E1940E86600A8D0C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F793653D1940E86600A8D0C9 /* UIKit.framework */; };
-		F79365411940E86600A8D0C9 /* libVExtensions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F79365291940E86600A8D0C9 /* libVExtensions.a */; };
-		F79365471940E86600A8D0C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F79365451940E86600A8D0C9 /* InfoPlist.strings */; };
-		F79365491940E86600A8D0C9 /* VExtensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F79365481940E86600A8D0C9 /* VExtensionsTests.m */; };
 		F79365581940E87B00A8D0C9 /* CGRect+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F79365531940E87B00A8D0C9 /* CGRect+Extensions.m */; };
 		F79365591940E87B00A8D0C9 /* UIView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = F79365551940E87B00A8D0C9 /* UIView+Extensions.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F793653F1940E86600A8D0C9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F79365211940E86600A8D0C9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F79365281940E86600A8D0C9;
-			remoteInfo = VExtensions;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		F79365271940E86600A8D0C9 /* CopyFiles */ = {
@@ -74,7 +58,6 @@
 		F79365291940E86600A8D0C9 /* libVExtensions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVExtensions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F793652C1940E86600A8D0C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F79365301940E86600A8D0C9 /* VExtensions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VExtensions-Prefix.pch"; sourceTree = "<group>"; };
-		F79365391940E86600A8D0C9 /* VExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F793653A1940E86600A8D0C9 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F793653D1940E86600A8D0C9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		F79365441940E86600A8D0C9 /* VExtensionsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VExtensionsTests-Info.plist"; sourceTree = "<group>"; };
@@ -97,17 +80,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F79365361940E86600A8D0C9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F79365411940E86600A8D0C9 /* libVExtensions.a in Frameworks */,
-				F793653B1940E86600A8D0C9 /* XCTest.framework in Frameworks */,
-				F793653E1940E86600A8D0C9 /* UIKit.framework in Frameworks */,
-				F793653C1940E86600A8D0C9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -125,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				F79365291940E86600A8D0C9 /* libVExtensions.a */,
-				F79365391940E86600A8D0C9 /* VExtensionsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,24 +191,6 @@
 			productReference = F79365291940E86600A8D0C9 /* libVExtensions.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		F79365381940E86600A8D0C9 /* VExtensionsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F793654F1940E86600A8D0C9 /* Build configuration list for PBXNativeTarget "VExtensionsTests" */;
-			buildPhases = (
-				F79365351940E86600A8D0C9 /* Sources */,
-				F79365361940E86600A8D0C9 /* Frameworks */,
-				F79365371940E86600A8D0C9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F79365401940E86600A8D0C9 /* PBXTargetDependency */,
-			);
-			name = VExtensionsTests;
-			productName = VExtensionsTests;
-			productReference = F79365391940E86600A8D0C9 /* VExtensionsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -260,21 +213,9 @@
 			projectRoot = "";
 			targets = (
 				F79365281940E86600A8D0C9 /* VExtensions */,
-				F79365381940E86600A8D0C9 /* VExtensionsTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		F79365371940E86600A8D0C9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F79365471940E86600A8D0C9 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F79365251940E86600A8D0C9 /* Sources */ = {
@@ -296,23 +237,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F79365351940E86600A8D0C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F79365491940E86600A8D0C9 /* VExtensionsTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F79365401940E86600A8D0C9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F79365281940E86600A8D0C9 /* VExtensions */;
-			targetProxy = F793653F1940E86600A8D0C9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F79365451940E86600A8D0C9 /* InfoPlist.strings */ = {
@@ -418,42 +343,6 @@
 			};
 			name = Release;
 		};
-		F79365501940E86600A8D0C9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VExtensions/VExtensions-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "VExtensionsTests/VExtensionsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		F79365511940E86600A8D0C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "VExtensions/VExtensions-Prefix.pch";
-				INFOPLIST_FILE = "VExtensionsTests/VExtensionsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -471,15 +360,6 @@
 			buildConfigurations = (
 				F793654D1940E86600A8D0C9 /* Debug */,
 				F793654E1940E86600A8D0C9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F793654F1940E86600A8D0C9 /* Build configuration list for PBXNativeTarget "VExtensionsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F79365501940E86600A8D0C9 /* Debug */,
-				F79365511940E86600A8D0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
