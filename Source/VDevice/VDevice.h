@@ -17,4 +17,24 @@
 
 + (NSString *)infos;
 
++ (NSString *)systemName;
+
++ (NSString *)deviceType;
+
++ (NSString *)deviceModel;
+
++ (NSString *)systemVersion;
+
++ (NSString *)screenSize;
+
++ (NSString *)country;
+
++ (NSString *)currency;
+
++ (NSString *)language;
+
++ (NSString *)timeZone;
+
++ (BOOL)isJailbroken;
+
 @end

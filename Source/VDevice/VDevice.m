@@ -13,6 +13,42 @@
 
 @implementation VDevice
 
+/*
+ System Uptime: 2 Days 6 Hours 4 Minutes
+ Device Model: iPhone
+ Device Name: “patpat”的 iPhone6+
+ System Name: iPhone OS
+ System Version: 8.3
+ System Device Type Unformatted: iPhone7,1
+ System Device Type Formatted: (null)
+ Screen Width: 414 Pixels
+ Screen Height: 736 Pixels
+ Screen Brightness: 100%
+ Multitasking Enabled: Yes
+ Jailbroken: No
+ Charging: Yes
+ Fully Charged: Yes
+ Country: en_CN
+ Language: en
+ TimeZone: Asia/Shanghai
+ Currency: CN¥
+ Application Version: 1.3 ,build Version: 1211
+ ClipBoard Content: "heyuan110@gmail.com"
+ Carrier Name: 中国移动
+ Carrier Country: CN
+ Cell IP Address: (null)
+ WiFi IP Address: 192.168.31.207
+ Connected to WiFi: Yes
+ Connected to Cell Network: No
+ Memory (RAM): (±)1024.00 MB
+ Used Memory: 755.13 MB 	74%
+ Wired Memory: 244.69 MB 	24%
+ Active Memory: 345.75 MB 	34%
+ Inactive Memory: 164.69 MB 	16%
+ Free Memory: 107.34 MB 	10%
+ Purgeable Memory: 2.76 MB 	0%
+ */
+
 // Get all Harware Information
 + (NSString *)infos
 {
@@ -65,6 +101,44 @@
                            activeMemory,inactiveMemory,freeMemory,purgableMemory,nil];
     NSString *infos = [infoArrays componentsJoinedByString:@"\n"];
     return infos;
+}
+
++ (NSString *)country
+{
+    return [VLocalization country];
+}
+
++ (NSString *)currency
+{
+   return [VLocalization currency];
+}
+
+
++ (NSString *)language
+{
+    return [VLocalization language];
+}
+
++ (NSString *)timeZone
+{
+    return [VLocalization timeZone];
+}
+
+
++ (BOOL)isJailbroken
+{
+    return ([VJailbreakCheck jailbroken] != NOTJAIL);
+}
+
+
++ (NSString *)deviceType
+{
+    return [VDevice systemDeviceTypeFormatted:NO];
+}
+
++ (NSString *)screenSize
+{
+    return [NSString stringWithFormat:@"%d:%d", [VDevice screenWidth], [VDevice screenHeight]];
 }
 
 // System Hardware Information
