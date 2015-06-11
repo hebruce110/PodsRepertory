@@ -14,17 +14,28 @@ typedef enum {
     VMargin6 = 6,
     VMargin7 = 7,
     VMargin8 = 8,
+    VMargin9 = 9,
     VMargin10 = 10,
+    VMargin11 = 11,
     VMargin12 = 12,
+    VMargin13 = 13,
     VMargin14 = 14,
+    VMargin15 = 15,
     VMargin16 = 16,
+    VMargin17 = 17,
     VMargin18 = 18,
+    VMargin19 = 19,
     VMargin20 = 20,
     VMargin22 = 22,
     VMargin24 = 24,
+    VMargin25 = 25,
     VMargin26 = 26,
     VMargin28 = 28,
-    VMargin30 = 30
+    VMargin30 = 30,
+    VMargin40 = 40,
+    VMargin60 = 60,
+    VMargin80 = 80,
+    VMargin100 = 100
 }VMargin;
 
 
