@@ -90,6 +90,22 @@
                                     callbackBlock:block];
 }
 
++(void)postRequestUrl:(NSString *)url
+                action:(NSString *)action
+            parameter:(NSDictionary *)parameter
+           uploadFile:(VRequestMultipartFormDataBlock)requestMultipartFormDataBlock
+             progress:(VRequestUploadProgressBlock)requestUploadProgressBlock
+        callbackBlock:(RequestCallBackBlock)block
+{
+    [VRequestManager.sharedInstance requstUrl:url
+                                      methord:kRequestMethodPost
+                                       action:action
+                                    parameter:parameter
+                                   uploadFile:requestMultipartFormDataBlock
+                                     progress:requestUploadProgressBlock
+                                callbackBlock:block];
+}
+
 +(void)putRequestAction:(NSString *)action
               parameter:(NSDictionary *)parameter
           callbackBlock:(RequestCallBackBlock)block

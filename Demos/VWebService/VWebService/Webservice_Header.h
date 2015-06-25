@@ -14,3 +14,6 @@ static NSString * const kAPIAccoutGetVerifyCode                       = @"accoun
 
 /*登录*/
 static NSString * const kAPIAccountLogin                              = @"account/login";
+
+/*上传文件*/
+static NSString * const kAPIUploadFile                                = @"uploadfile";

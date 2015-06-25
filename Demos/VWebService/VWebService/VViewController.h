@@ -10,4 +10,6 @@
 
 @interface VViewController : UIViewController
 
+- (IBAction)uploadAction:(id)sender;
+
 @end

@@ -50,14 +50,14 @@
 + (void)setTimeOut:(NSInteger)timeOut;
 
 /**
- *  请求的参数格式为约定格式
+ *  请求的参数格式为约定格式。如果请求不是按照约定的格式，那么就会按正常的request的格式去请求，不进行校验等.
  *
  *  @param isAgreed 是否是约定的
  */
 + (void)setIsAgreedParameterFormat:(BOOL)isAgreed;
 
 /**
- *  返回数据的内容格式为约定格式
+ *  返回数据的内容格式为约定格式，如果返回是约定的格式就会读取error列表，创建错误码等，否则就会直接返回response的内容
  *
  *  @param isAgreed 是否是约定的
  */
@@ -98,6 +98,23 @@
 +(void)postRequestAction:(NSString *)action
                parameter:(NSDictionary *)parameter
            callbackBlock:(RequestCallBackBlock)block;
+
+/**
+ *  上传文件发起POST请求
+ *
+ *  @param url                           url，不填就用默认的
+ *  @param action                        请求的路径
+ *  @param parameter                     参数
+ *  @param requestMultipartFormDataBlock 上传的内容，传nil则不上传文件，不会回调progressblock
+ *  @param requestUploadProgressBlock    上传进度回调,可以传nil不回调
+ *  @param block                         请求完回调
+ */
++(void)postRequestUrl:(NSString *)url
+               action:(NSString *)action
+            parameter:(NSDictionary *)parameter
+           uploadFile:(VRequestMultipartFormDataBlock)requestMultipartFormDataBlock
+             progress:(VRequestUploadProgressBlock)requestUploadProgressBlock
+        callbackBlock:(RequestCallBackBlock)block;
 
 /**
  *	@brief	发起PUT请求

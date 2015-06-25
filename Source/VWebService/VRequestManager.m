@@ -29,7 +29,6 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
 //约定的默认校验串码
 #define kSignatureDefaultCode @"XxV58bu28P7a885X"
 
-
 @implementation VRequestManager
 {
     NSDictionary *_errorCodes;
@@ -127,12 +126,21 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     return @{kResquestParameter:parametersJsonString};
 }
 
-
-
 - (void)requstMethord:(NSString *)methord
                action:(NSString *)action
             parameter:(NSDictionary *)_parameters
         callbackBlock:(RequestCallBackBlock)block
+{
+    [self requstUrl:@"" methord:methord action:action parameter:_parameters uploadFile:nil progress:nil callbackBlock:block];
+}
+
+- (void)requstUrl:(NSString *)url
+          methord:(NSString *)methord
+           action:(NSString *)action
+        parameter:(NSDictionary *)_parameters
+       uploadFile:(VRequestMultipartFormDataBlock)requestMultipartFormDataBlock
+         progress:(VRequestUploadProgressBlock)requestUploadProgressBlock
+    callbackBlock:(RequestCallBackBlock)block
 {
     action = FormatString(action,@"");
     
@@ -140,12 +148,16 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary:_parameters];
     if (_isRestfulFormatActionParameter) {
        urlString =  [self.baseURL URLByAppendingPathComponent:action].absoluteString;
-//        urlString = [[NSURL URLWithString:action relativeToURL:self.baseURL] absoluteString];
     }else {
         if (isValidString(action)){
             parameters[kResquestParameterAction] = action;
         }
         urlString = [[NSURL URLWithString:@"" relativeToURL:self.baseURL] absoluteString];
+    }
+    
+    //如果有url参数重新设置urlString
+    if (url) {
+        urlString = url;
     }
     
     //如果最后一个是/就去掉
@@ -168,18 +180,26 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
             HYLog(@"\nHTTP Request:＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝》\nStyle:raw \nMethord: %@ %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",methord,[[NSDate date] formatYMDHMS],action,jsonString,request.URL.absoluteString);
         }
     }else {
-        request = [self.requestSerializer requestWithMethod:methord URLString:urlString parameters:vars error:nil];
+        if ([methord isEqualToString:kRequestMethodPost] && requestMultipartFormDataBlock) {
+            request =  [self.requestSerializer multipartFormRequestWithMethod:methord URLString:urlString parameters:vars constructingBodyWithBlock:requestMultipartFormDataBlock error:nil];
+        }else{
+                request = [self.requestSerializer requestWithMethod:methord URLString:urlString parameters:vars error:nil];
+        }
         HYLog(@"\nHTTP Request:＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝》\nStyle:form-data \nMethord: %@ %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",methord,[[NSDate date] formatYMDHMS],action,vars,request.URL.absoluteString);
     }
     AFHTTPRequestOperation *operation = [self HTTPRequestOperationWithRequest:request
                                                                       success:^(AFHTTPRequestOperation *operation, id info){
-                                                                          HYLog(@"\nHTTP Response:《＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\nMethord: %@ %@ \nStatus: %d \nAction: %@\nContent:\n%@",request.HTTPMethod,[[NSDate date] formatYMDHMS],operation.response.statusCode,request.URL.absoluteString,info);
+                                                                          HYLog(@"\nHTTP Response:《＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\nMethord: %@ %@ \nStatus: %ld \nAction: %@\nContent:\n%@",request.HTTPMethod,[[NSDate date] formatYMDHMS],operation.response.statusCode,request.URL.absoluteString,info);
                                                                           [self handleRequest:operation result:info status:YES callbackBlock:block];
                                                                       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                                                                          HYLog(@"\nHTTP Response:《＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\nMethord: %@ %@ \nStatus: %d \nError:%d %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",request.HTTPMethod,[[NSDate date] formatYMDHMS],operation.response.statusCode,error.code,error.localizedDescription,action,vars,request.URL.absoluteString);
+                                                                          HYLog(@"\nHTTP Response:《＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝\nMethord: %@ %@ \nStatus: %ld \nError:%ld %@ \nAction: %@ \nParameters: %@ \nUrl: %@\n",request.HTTPMethod,[[NSDate date] formatYMDHMS],(long)operation.response.statusCode,(long)error.code,error.localizedDescription,action,vars,request.URL.absoluteString);
                                                                           [self handleRequest:operation result:error status:NO callbackBlock:block];
                                                                       }];
     [self.operationQueue addOperation:operation];
+    
+    if (requestMultipartFormDataBlock && requestUploadProgressBlock) {
+        [operation setUploadProgressBlock:requestUploadProgressBlock];
+    }
 }
 
 - (void)handleRequest:(AFHTTPRequestOperation *)operation

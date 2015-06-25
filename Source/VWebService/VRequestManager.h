@@ -26,6 +26,8 @@ typedef enum {
 }WebServiceStyle;
 
 typedef void (^RequestCallBackBlock)(id result,BOOL status,NSError *error);
+typedef void (^VRequestMultipartFormDataBlock)(id<AFMultipartFormData> formData);
+typedef void (^VRequestUploadProgressBlock)(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite);
 
 @interface VRequestManager : AFHTTPRequestOperationManager
 
@@ -42,5 +44,15 @@ typedef void (^RequestCallBackBlock)(id result,BOOL status,NSError *error);
                action:(NSString *)action
             parameter:(NSDictionary *)parameters
         callbackBlock:(RequestCallBackBlock)block;
+
+- (void)requstUrl:(NSString *)url
+          methord:(NSString *)methord
+           action:(NSString *)action
+        parameter:(NSDictionary *)parameters
+       uploadFile:(VRequestMultipartFormDataBlock)requestMultipartFormDataBlock
+         progress:(VRequestUploadProgressBlock)requestUploadProgressBlock
+    callbackBlock:(RequestCallBackBlock)block;
+
+
 
 @end

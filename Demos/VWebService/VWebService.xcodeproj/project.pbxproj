@@ -26,6 +26,7 @@
 		1C85014C1967E8AD0069561A /* VRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8501471967E8AD0069561A /* VRequestManager.m */; };
 		1C85014D1967E8AD0069561A /* VWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8501491967E8AD0069561A /* VWebService.m */; };
 		27BA7B7044BC4CCF9560AF57 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9199ECBA07F40789CC9C453 /* libPods.a */; };
+		EDFD79A31B3C0ABA009134E4 /* demo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EDFD79A21B3C0ABA009134E4 /* demo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		367AD4073D8F0208B52085AE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5FD76F5EBA1EE724B22D0B22 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B9199ECBA07F40789CC9C453 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDFD79A21B3C0ABA009134E4 /* demo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo.jpg; sourceTree = "<group>"; };
 		F74BF27319EF6D3800BEDB55 /* Webservice_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Webservice_Header.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 				1C85010419665F8D0069561A /* Main.storyboard */,
 				1C85010719665F8D0069561A /* VViewController.h */,
 				1C85010819665F8D0069561A /* VViewController.m */,
+				EDFD79A21B3C0ABA009134E4 /* demo.jpg */,
 				1C85010A19665F8D0069561A /* Images.xcassets */,
 				1C8500F919665F8D0069561A /* Supporting Files */,
 			);
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C85010B19665F8D0069561A /* Images.xcassets in Resources */,
+				EDFD79A31B3C0ABA009134E4 /* demo.jpg in Resources */,
 				1C85014B1967E8AD0069561A /* VErrorCodes_Template.plist in Resources */,
 				1C8500FD19665F8D0069561A /* InfoPlist.strings in Resources */,
 				1C85010619665F8D0069561A /* Main.storyboard in Resources */,
