@@ -131,7 +131,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
             parameter:(NSDictionary *)_parameters
         callbackBlock:(RequestCallBackBlock)block
 {
-    [self requstUrl:@"" methord:methord action:action parameter:_parameters uploadFile:nil progress:nil callbackBlock:block];
+    [self requstUrl:nil methord:methord action:action parameter:_parameters uploadFile:nil progress:nil callbackBlock:block];
 }
 
 - (void)requstUrl:(NSString *)url
@@ -156,7 +156,7 @@ static NSString *const kAPIErrorCodes                = @"VErrorCodes";
     }
     
     //如果有url参数重新设置urlString
-    if (url) {
+    if (isValidString(url)) {
         urlString = url;
     }
     
