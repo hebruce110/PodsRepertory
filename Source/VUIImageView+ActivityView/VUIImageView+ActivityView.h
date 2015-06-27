@@ -34,8 +34,8 @@ typedef enum {
 
 @interface UIImageView(UIImageView_Loading)
 
-@property (nonatomic, assign) VLoadingViewCategory loadingViewCategory;
-@property (nonatomic, assign) VActivityViewType activityViewType;
+@property (nonatomic, assign) VLoadingViewCategory loadingViewCategory; //set loading view category,default custom
+@property (nonatomic, assign) VActivityViewType activityViewType; //set activityview type, default gray
 
 /**
  * Set the imageView `image` with an `url`.
