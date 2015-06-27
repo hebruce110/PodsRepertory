@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "VUIImageView+ActivityView"
   s.version      = "1.0.0"
-  s.summary      = "图片的loading动画"
+  s.summary      = "基于SDWebImage扩展的UIImageView加载图片时loading动画，包含系统的UIActivityIndicatorView和自定义的VActivityView，使用和SDWebImage一样，只需要在后面加一个animated:(BOOL)animated即可，例如 - (void)sd_setImageWithURL:(NSURL *)url animated:(BOOL)animated"
   s.homepage     = 'https://github.com/heyuan110/PodsRepertory'
   s.license      = "MIT"
   s.author       = 'Bruce'
