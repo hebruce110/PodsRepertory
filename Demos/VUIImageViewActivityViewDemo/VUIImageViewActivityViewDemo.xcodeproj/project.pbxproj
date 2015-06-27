@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD19BFBC96DA929D8D71441B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4F7A85605AEBE36ECB32D1 /* libPods.a */; };
+		ED472A611B3E798B00B05D16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED472A601B3E798B00B05D16 /* main.m */; };
+		ED472A641B3E798B00B05D16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED472A631B3E798B00B05D16 /* AppDelegate.m */; };
+		ED472A6A1B3E798B00B05D16 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED472A691B3E798B00B05D16 /* DetailViewController.m */; };
+		ED472A6D1B3E798B00B05D16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED472A6B1B3E798B00B05D16 /* Main.storyboard */; };
+		ED472A6F1B3E798B00B05D16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED472A6E1B3E798B00B05D16 /* Images.xcassets */; };
+		ED472A721B3E798B00B05D16 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED472A701B3E798B00B05D16 /* LaunchScreen.xib */; };
+		ED472A7E1B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ED472A7D1B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests.m */; };
+		ED472A941B3E7A2900B05D16 /* loading_black.png in Resources */ = {isa = PBXBuildFile; fileRef = ED472A891B3E7A2900B05D16 /* loading_black.png */; };
+		ED472A951B3E7A2900B05D16 /* loading_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED472A8A1B3E7A2900B05D16 /* loading_black@2x.png */; };
+		ED472A961B3E7A2900B05D16 /* loading_black@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED472A8B1B3E7A2900B05D16 /* loading_black@3x.png */; };
+		ED472A971B3E7A2900B05D16 /* loading_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = ED472A8C1B3E7A2900B05D16 /* loading_gray.png */; };
+		ED472A981B3E7A2900B05D16 /* loading_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED472A8D1B3E7A2900B05D16 /* loading_gray@2x.png */; };
+		ED472A991B3E7A2900B05D16 /* loading_gray@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED472A8E1B3E7A2900B05D16 /* loading_gray@3x.png */; };
+		ED472A9A1B3E7A2900B05D16 /* loading_white.png in Resources */ = {isa = PBXBuildFile; fileRef = ED472A8F1B3E7A2900B05D16 /* loading_white.png */; };
+		ED472A9B1B3E7A2900B05D16 /* loading_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED472A901B3E7A2900B05D16 /* loading_white@2x.png */; };
+		ED472A9C1B3E7A2900B05D16 /* loading_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED472A911B3E7A2900B05D16 /* loading_white@3x.png */; };
+		ED472A9D1B3E7A2900B05D16 /* VUIImageView+ActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED472A931B3E7A2900B05D16 /* VUIImageView+ActivityView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED472A781B3E798B00B05D16 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED472A531B3E798B00B05D16 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED472A5A1B3E798B00B05D16;
+			remoteInfo = VUIImageViewActivityViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AE670948F2E2A328F83BAEB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0B4F7A85605AEBE36ECB32D1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB0853AD5400026464EA4240 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		ED472A5B1B3E798B00B05D16 /* VUIImageViewActivityViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VUIImageViewActivityViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED472A5F1B3E798B00B05D16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED472A601B3E798B00B05D16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED472A621B3E798B00B05D16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED472A631B3E798B00B05D16 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED472A681B3E798B00B05D16 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		ED472A691B3E798B00B05D16 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		ED472A6C1B3E798B00B05D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED472A6E1B3E798B00B05D16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ED472A711B3E798B00B05D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ED472A771B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VUIImageViewActivityViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED472A7C1B3E798B00B05D16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED472A7D1B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VUIImageViewActivityViewDemoTests.m; sourceTree = "<group>"; };
+		ED472A891B3E7A2900B05D16 /* loading_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_black.png; sourceTree = "<group>"; };
+		ED472A8A1B3E7A2900B05D16 /* loading_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_black@2x.png"; sourceTree = "<group>"; };
+		ED472A8B1B3E7A2900B05D16 /* loading_black@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_black@3x.png"; sourceTree = "<group>"; };
+		ED472A8C1B3E7A2900B05D16 /* loading_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_gray.png; sourceTree = "<group>"; };
+		ED472A8D1B3E7A2900B05D16 /* loading_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_gray@2x.png"; sourceTree = "<group>"; };
+		ED472A8E1B3E7A2900B05D16 /* loading_gray@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_gray@3x.png"; sourceTree = "<group>"; };
+		ED472A8F1B3E7A2900B05D16 /* loading_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_white.png; sourceTree = "<group>"; };
+		ED472A901B3E7A2900B05D16 /* loading_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_white@2x.png"; sourceTree = "<group>"; };
+		ED472A911B3E7A2900B05D16 /* loading_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading_white@3x.png"; sourceTree = "<group>"; };
+		ED472A921B3E7A2900B05D16 /* VUIImageView+ActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VUIImageView+ActivityView.h"; sourceTree = "<group>"; };
+		ED472A931B3E7A2900B05D16 /* VUIImageView+ActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VUIImageView+ActivityView.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED472A581B3E798B00B05D16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD19BFBC96DA929D8D71441B /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED472A741B3E798B00B05D16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B218B8F3A767A912F00EA912 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B4F7A85605AEBE36ECB32D1 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3631620E867C8D788842F0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0AE670948F2E2A328F83BAEB /* Pods.debug.xcconfig */,
+				EB0853AD5400026464EA4240 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ED472A521B3E798B00B05D16 = {
+			isa = PBXGroup;
+			children = (
+				ED472A5D1B3E798B00B05D16 /* VUIImageViewActivityViewDemo */,
+				ED472A7A1B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests */,
+				ED472A5C1B3E798B00B05D16 /* Products */,
+				C3631620E867C8D788842F0D /* Pods */,
+				B218B8F3A767A912F00EA912 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ED472A5C1B3E798B00B05D16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED472A5B1B3E798B00B05D16 /* VUIImageViewActivityViewDemo.app */,
+				ED472A771B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED472A5D1B3E798B00B05D16 /* VUIImageViewActivityViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				ED472A871B3E7A2900B05D16 /* VUIImageView+ActivityView */,
+				ED472A621B3E798B00B05D16 /* AppDelegate.h */,
+				ED472A631B3E798B00B05D16 /* AppDelegate.m */,
+				ED472A681B3E798B00B05D16 /* DetailViewController.h */,
+				ED472A691B3E798B00B05D16 /* DetailViewController.m */,
+				ED472A6B1B3E798B00B05D16 /* Main.storyboard */,
+				ED472A6E1B3E798B00B05D16 /* Images.xcassets */,
+				ED472A701B3E798B00B05D16 /* LaunchScreen.xib */,
+				ED472A5E1B3E798B00B05D16 /* Supporting Files */,
+			);
+			path = VUIImageViewActivityViewDemo;
+			sourceTree = "<group>";
+		};
+		ED472A5E1B3E798B00B05D16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED472A5F1B3E798B00B05D16 /* Info.plist */,
+				ED472A601B3E798B00B05D16 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED472A7A1B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED472A7D1B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests.m */,
+				ED472A7B1B3E798B00B05D16 /* Supporting Files */,
+			);
+			path = VUIImageViewActivityViewDemoTests;
+			sourceTree = "<group>";
+		};
+		ED472A7B1B3E798B00B05D16 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED472A7C1B3E798B00B05D16 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED472A871B3E7A2900B05D16 /* VUIImageView+ActivityView */ = {
+			isa = PBXGroup;
+			children = (
+				ED472A881B3E7A2900B05D16 /* Images */,
+				ED472A921B3E7A2900B05D16 /* VUIImageView+ActivityView.h */,
+				ED472A931B3E7A2900B05D16 /* VUIImageView+ActivityView.m */,
+			);
+			name = "VUIImageView+ActivityView";
+			path = "../../../Source/VUIImageView+ActivityView";
+			sourceTree = "<group>";
+		};
+		ED472A881B3E7A2900B05D16 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ED472A891B3E7A2900B05D16 /* loading_black.png */,
+				ED472A8A1B3E7A2900B05D16 /* loading_black@2x.png */,
+				ED472A8B1B3E7A2900B05D16 /* loading_black@3x.png */,
+				ED472A8C1B3E7A2900B05D16 /* loading_gray.png */,
+				ED472A8D1B3E7A2900B05D16 /* loading_gray@2x.png */,
+				ED472A8E1B3E7A2900B05D16 /* loading_gray@3x.png */,
+				ED472A8F1B3E7A2900B05D16 /* loading_white.png */,
+				ED472A901B3E7A2900B05D16 /* loading_white@2x.png */,
+				ED472A911B3E7A2900B05D16 /* loading_white@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED472A5A1B3E798B00B05D16 /* VUIImageViewActivityViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED472A811B3E798B00B05D16 /* Build configuration list for PBXNativeTarget "VUIImageViewActivityViewDemo" */;
+			buildPhases = (
+				5AF59CE4AFC9A2B7623D9A42 /* Check Pods Manifest.lock */,
+				ED472A571B3E798B00B05D16 /* Sources */,
+				ED472A581B3E798B00B05D16 /* Frameworks */,
+				ED472A591B3E798B00B05D16 /* Resources */,
+				4C2A804FDFBAEFD379F7ACD9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VUIImageViewActivityViewDemo;
+			productName = VUIImageViewActivityViewDemo;
+			productReference = ED472A5B1B3E798B00B05D16 /* VUIImageViewActivityViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED472A761B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED472A841B3E798B00B05D16 /* Build configuration list for PBXNativeTarget "VUIImageViewActivityViewDemoTests" */;
+			buildPhases = (
+				ED472A731B3E798B00B05D16 /* Sources */,
+				ED472A741B3E798B00B05D16 /* Frameworks */,
+				ED472A751B3E798B00B05D16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED472A791B3E798B00B05D16 /* PBXTargetDependency */,
+			);
+			name = VUIImageViewActivityViewDemoTests;
+			productName = VUIImageViewActivityViewDemoTests;
+			productReference = ED472A771B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED472A531B3E798B00B05D16 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = heyuan110.com;
+				TargetAttributes = {
+					ED472A5A1B3E798B00B05D16 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					ED472A761B3E798B00B05D16 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = ED472A5A1B3E798B00B05D16;
+					};
+				};
+			};
+			buildConfigurationList = ED472A561B3E798B00B05D16 /* Build configuration list for PBXProject "VUIImageViewActivityViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED472A521B3E798B00B05D16;
+			productRefGroup = ED472A5C1B3E798B00B05D16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED472A5A1B3E798B00B05D16 /* VUIImageViewActivityViewDemo */,
+				ED472A761B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED472A591B3E798B00B05D16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED472A9A1B3E7A2900B05D16 /* loading_white.png in Resources */,
+				ED472A981B3E7A2900B05D16 /* loading_gray@2x.png in Resources */,
+				ED472A991B3E7A2900B05D16 /* loading_gray@3x.png in Resources */,
+				ED472A6D1B3E798B00B05D16 /* Main.storyboard in Resources */,
+				ED472A9C1B3E7A2900B05D16 /* loading_white@3x.png in Resources */,
+				ED472A721B3E798B00B05D16 /* LaunchScreen.xib in Resources */,
+				ED472A9B1B3E7A2900B05D16 /* loading_white@2x.png in Resources */,
+				ED472A961B3E7A2900B05D16 /* loading_black@3x.png in Resources */,
+				ED472A971B3E7A2900B05D16 /* loading_gray.png in Resources */,
+				ED472A941B3E7A2900B05D16 /* loading_black.png in Resources */,
+				ED472A6F1B3E798B00B05D16 /* Images.xcassets in Resources */,
+				ED472A951B3E7A2900B05D16 /* loading_black@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED472A751B3E798B00B05D16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C2A804FDFBAEFD379F7ACD9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AF59CE4AFC9A2B7623D9A42 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED472A571B3E798B00B05D16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED472A641B3E798B00B05D16 /* AppDelegate.m in Sources */,
+				ED472A611B3E798B00B05D16 /* main.m in Sources */,
+				ED472A9D1B3E7A2900B05D16 /* VUIImageView+ActivityView.m in Sources */,
+				ED472A6A1B3E798B00B05D16 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED472A731B3E798B00B05D16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED472A7E1B3E798B00B05D16 /* VUIImageViewActivityViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED472A791B3E798B00B05D16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED472A5A1B3E798B00B05D16 /* VUIImageViewActivityViewDemo */;
+			targetProxy = ED472A781B3E798B00B05D16 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED472A6B1B3E798B00B05D16 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED472A6C1B3E798B00B05D16 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED472A701B3E798B00B05D16 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED472A711B3E798B00B05D16 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED472A7F1B3E798B00B05D16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED472A801B3E798B00B05D16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED472A821B3E798B00B05D16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AE670948F2E2A328F83BAEB /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VUIImageViewActivityViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED472A831B3E798B00B05D16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB0853AD5400026464EA4240 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VUIImageViewActivityViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ED472A851B3E798B00B05D16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VUIImageViewActivityViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VUIImageViewActivityViewDemo.app/VUIImageViewActivityViewDemo";
+			};
+			name = Debug;
+		};
+		ED472A861B3E798B00B05D16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VUIImageViewActivityViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VUIImageViewActivityViewDemo.app/VUIImageViewActivityViewDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED472A561B3E798B00B05D16 /* Build configuration list for PBXProject "VUIImageViewActivityViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED472A7F1B3E798B00B05D16 /* Debug */,
+				ED472A801B3E798B00B05D16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED472A811B3E798B00B05D16 /* Build configuration list for PBXNativeTarget "VUIImageViewActivityViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED472A821B3E798B00B05D16 /* Debug */,
+				ED472A831B3E798B00B05D16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED472A841B3E798B00B05D16 /* Build configuration list for PBXNativeTarget "VUIImageViewActivityViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED472A851B3E798B00B05D16 /* Debug */,
+				ED472A861B3E798B00B05D16 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED472A531B3E798B00B05D16 /* Project object */;
+}

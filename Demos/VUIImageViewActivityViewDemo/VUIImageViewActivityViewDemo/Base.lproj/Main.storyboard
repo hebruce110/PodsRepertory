@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ah7-4n-0Wa">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Detail-->
+        <scene sceneID="Cn3-H9-jdl">
+            <objects>
+                <viewController title="Detail" id="Ah7-4n-0Wa" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cIm-e0-J51"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0L-h9-sNL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MMQ-IT-qOo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PXn-yM-a6X">
+                                <rect key="frame" x="200" y="100" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.90540167297979801" green="0.90540167297979801" blue="0.90540167297979801" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8DH-M6-yEO"/>
+                                    <constraint firstAttribute="height" constant="200" id="SxK-AE-hmH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WZQ-3g-yQD">
+                                <rect key="frame" x="200" y="330" width="200" height="200"/>
+                                <color key="backgroundColor" red="0.90540167299999996" green="0.90540167299999996" blue="0.90540167299999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="GaI-3X-J1K"/>
+                                    <constraint firstAttribute="height" constant="200" id="SeT-WI-3h6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WZQ-3g-yQD" firstAttribute="leading" secondItem="PXn-yM-a6X" secondAttribute="leading" id="EdZ-9Q-yJL"/>
+                            <constraint firstItem="PXn-yM-a6X" firstAttribute="top" secondItem="MMQ-IT-qOo" secondAttribute="top" constant="100" id="Op5-8J-8Wq"/>
+                            <constraint firstAttribute="centerX" secondItem="PXn-yM-a6X" secondAttribute="centerX" id="WJ1-CG-GcM"/>
+                            <constraint firstAttribute="centerY" secondItem="PXn-yM-a6X" secondAttribute="centerY" id="c6J-bL-Jfn"/>
+                            <constraint firstItem="WZQ-3g-yQD" firstAttribute="top" secondItem="PXn-yM-a6X" secondAttribute="bottom" constant="30" id="fw3-hj-CDc"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="c6J-bL-Jfn"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
+                    <connections>
+                        <outlet property="detailImageView" destination="PXn-yM-a6X" id="ciR-Wu-T5f"/>
+                        <outlet property="detailImageView2" destination="WZQ-3g-yQD" id="cJ3-Yy-DDU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1343" y="64"/>
+        </scene>
+    </scenes>
+</document>
