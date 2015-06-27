@@ -165,7 +165,6 @@ static NSString * const kUIImageViewLoadingAnimationKey = @"rotationAnimation";
     VLoadingViewCategory loadingViewType = self.loadingViewCategory;
     if (animated) {
         VActivityViewType type = self.activityViewType;
-        UIView *activityView = [self viewWithTag:kUIActivityIndicatorViewTag];
         if (!activityView) {
             if (loadingViewType == VLoadingViewCategoryCustom) {
                 activityView = [[VActivityView alloc]initWithFrame:CGRectZero];
@@ -226,16 +225,16 @@ static NSString * const kUIImageViewLoadingAnimationKey = @"rotationAnimation";
                                completeBlock(YES);
                            }
                        }
-                       if (animated) {
-                           dispatch_async(dispatch_get_main_queue(), ^{
+                       dispatch_async(dispatch_get_main_queue(), ^{
+                           if (animated) {
                                if (loadingViewType == VLoadingViewCategoryCustom) {
                                    [(VActivityView *)activityView endAnimating];
                                }else{
                                    [(UIActivityIndicatorView *)activityView stopAnimating];
                                }
-                           });
-                       }
-                           }];
+                           }
+                       });
+                   }];
 }
 
 @end
