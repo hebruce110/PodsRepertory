@@ -1,6 +1,6 @@
 //
 //  Created by Bruce on 15/2/10.
-//  Copyright (c) 2015年 heyuan110.com. All rights reserved.
+//  Copyright (c) 2015年 http://heyuan110.com. All rights reserved.
 //
 
 #import "VUIImageView+ActivityView.h"
@@ -91,7 +91,7 @@ static NSString * const kUIImageViewLoadingAnimationKey = @"rotationAnimation";
 {
     [self removeConstraints:self.constraints];
     
-    //禁止自动转换AutoresizingMask成constraints
+    //disable AutoresizingMask to constraints
     self.translatesAutoresizingMaskIntoConstraints = NO;
     
     UIView *currentView = self;

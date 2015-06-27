@@ -1,7 +1,7 @@
 //
 //
 //  Created by Bruce on 15/2/10.
-//  Copyright (c) 2015年 heyuan110.com. All rights reserved.
+//  Copyright (c) 2015年 http://heyuan110.com. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -45,7 +45,8 @@ typedef enum {
  * @param url            The url for the image.
  * @param animated       loading animation.
  */
-- (void)sd_setImageWithURL:(NSURL *)url animated:(BOOL)animated;
+- (void)sd_setImageWithURL:(NSURL *)url
+                  animated:(BOOL)animated;
 
 /**
  * Set the imageView `image` with an `url`, placeholder.
