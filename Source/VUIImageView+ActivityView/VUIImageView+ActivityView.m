@@ -9,6 +9,7 @@
 
 static CGFloat const kActivityViewWidth = 30.0f;
 static NSString * const kUIImageViewLoadingAnimationKey = @"rotationAnimation";
+#define kUIActivityIndicatorViewTag 99
 
 @implementation VActivityView
 

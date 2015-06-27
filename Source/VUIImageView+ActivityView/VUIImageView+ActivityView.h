@@ -25,8 +25,6 @@ typedef enum {
 
 @end
 
-#define kUIActivityIndicatorViewTag 99
-
 typedef enum {
     VLoadingViewCategoryCustom,
     VLoadingViewCategorySystem
