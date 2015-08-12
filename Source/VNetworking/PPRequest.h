@@ -1,9 +1,9 @@
 //
 //  PPRequest.h
-//  PatPat
+
 //
 //  Created by Yuan on 14/12/23.
-//  Copyright (c) 2014年 http://www.patpat.com. All rights reserved.
+//  Copyright (c) 2014年 http://www.heyuan110.com. All rights reserved.
 //
 //  Request的基类，所有请求类请继承此类,并遵守PPRequestProtocol协议
 //

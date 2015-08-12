@@ -1,9 +1,9 @@
 //
 //  PPRequestManager.h
-//  PatPat
+
 //
 //  Created by Yuan on 14/12/24.
-//  Copyright (c) 2014年 http://www.patpat.com. All rights reserved.
+//  Copyright (c) 2014年 http://www.heyuan110.com. All rights reserved.
 //
 
 #import "AFHTTPSessionManager.h"
