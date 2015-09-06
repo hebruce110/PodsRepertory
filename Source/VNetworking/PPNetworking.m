@@ -241,7 +241,8 @@ static NSString *const RequestMethodDelete  = @"DELETE";
     if (request.child && [request.child respondsToSelector:@selector(host)] && [request.child host]) {
         host = [request.child host];
     }
-    return [host stringByAppendingPathComponent:path];
+    NSURL *URL = [[NSURL URLWithString:host] URLByAppendingPathComponent:path];
+    return URL.absoluteString;
 }
 
 - (BOOL)statusCodeValidator:(NSInteger)statusCode {
