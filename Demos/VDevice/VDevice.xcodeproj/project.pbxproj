@@ -15,7 +15,6 @@
 		F79364FE1940CECD00A8D0C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F79364FC1940CECD00A8D0C9 /* InfoPlist.strings */; };
 		F79365001940CECD00A8D0C9 /* VDeviceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F79364FF1940CECD00A8D0C9 /* VDeviceTests.m */; };
 		F79365161940CEDF00A8D0C9 /* VDiskInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F793650B1940CEDF00A8D0C9 /* VDiskInfo.m */; };
-		F79365171940CEDF00A8D0C9 /* VJailbreakCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = F793650D1940CEDF00A8D0C9 /* VJailbreakCheck.m */; };
 		F79365181940CEDF00A8D0C9 /* VLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = F793650F1940CEDF00A8D0C9 /* VLocalization.m */; };
 		F79365191940CEDF00A8D0C9 /* VMemoryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F79365111940CEDF00A8D0C9 /* VMemoryInfo.m */; };
 		F793651A1940CEDF00A8D0C9 /* VNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = F79365131940CEDF00A8D0C9 /* VNetwork.m */; };
@@ -58,8 +57,6 @@
 		F79364FF1940CECD00A8D0C9 /* VDeviceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VDeviceTests.m; sourceTree = "<group>"; };
 		F793650A1940CEDF00A8D0C9 /* VDiskInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDiskInfo.h; sourceTree = "<group>"; };
 		F793650B1940CEDF00A8D0C9 /* VDiskInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDiskInfo.m; sourceTree = "<group>"; };
-		F793650C1940CEDF00A8D0C9 /* VJailbreakCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VJailbreakCheck.h; sourceTree = "<group>"; };
-		F793650D1940CEDF00A8D0C9 /* VJailbreakCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VJailbreakCheck.m; sourceTree = "<group>"; };
 		F793650E1940CEDF00A8D0C9 /* VLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLocalization.h; sourceTree = "<group>"; };
 		F793650F1940CEDF00A8D0C9 /* VLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLocalization.m; sourceTree = "<group>"; };
 		F79365101940CEDF00A8D0C9 /* VMemoryInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMemoryInfo.h; sourceTree = "<group>"; };
@@ -170,8 +167,6 @@
 			children = (
 				F793650A1940CEDF00A8D0C9 /* VDiskInfo.h */,
 				F793650B1940CEDF00A8D0C9 /* VDiskInfo.m */,
-				F793650C1940CEDF00A8D0C9 /* VJailbreakCheck.h */,
-				F793650D1940CEDF00A8D0C9 /* VJailbreakCheck.m */,
 				F793650E1940CEDF00A8D0C9 /* VLocalization.h */,
 				F793650F1940CEDF00A8D0C9 /* VLocalization.m */,
 				F79365101940CEDF00A8D0C9 /* VMemoryInfo.h */,
@@ -227,7 +222,7 @@
 		F79364D81940CECD00A8D0C9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = www.heyuan110.com;
 			};
 			buildConfigurationList = F79364DB1940CECD00A8D0C9 /* Build configuration list for PBXProject "VDevice" */;
@@ -268,7 +263,6 @@
 				F79365161940CEDF00A8D0C9 /* VDiskInfo.m in Sources */,
 				F79365191940CEDF00A8D0C9 /* VMemoryInfo.m in Sources */,
 				F793651B1940CEDF00A8D0C9 /* VDevice.m in Sources */,
-				F79365171940CEDF00A8D0C9 /* VJailbreakCheck.m in Sources */,
 				F793651A1940CEDF00A8D0C9 /* VNetwork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +314,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -410,6 +405,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "VDeviceTests/VDeviceTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "apps.VDevice.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -426,6 +422,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VDevice/VDevice-Prefix.pch";
 				INFOPLIST_FILE = "VDeviceTests/VDeviceTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "apps.VDevice.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -450,6 +447,7 @@
 				F79365051940CECD00A8D0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F79365061940CECD00A8D0C9 /* Build configuration list for PBXNativeTarget "VDeviceTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +456,7 @@
 				F79365081940CECD00A8D0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

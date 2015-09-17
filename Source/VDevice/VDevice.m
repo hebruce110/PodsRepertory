@@ -65,7 +65,6 @@
     NSString *screenHeight = [NSString stringWithFormat:@"Screen Height: %d Pixels", [VDevice screenHeight]];
     NSString *screenBrightness = [NSString stringWithFormat:@"Screen Brightness: %.0f%%", [VDevice screenBrightness]];
     NSString *multitaskingEnabled = ([VDevice multitaskingEnabled]) ? @"Multitasking Enabled: Yes" : @"Multitasking: No";
-    NSString *jailbroken = ([VJailbreakCheck jailbroken] != NOTJAIL) ? @"Jailbroken: Yes" : @"Jailbroken: No";
     NSString *charging = ([VDevice charging]) ? @"Charging: Yes" : @"Charging: No";
     NSString *fullyCharged = ([VDevice fullyCharged]) ? @"Fully Charged: Yes" : @"Fully Charged: No";
     NSString *country = [NSString stringWithFormat:@"Country: %@", [VLocalization country]];
@@ -91,8 +90,7 @@
     NSArray *infoArrays = [NSArray arrayWithObjects:systemUptime,deviceModel,deviceName,
                            systemName,systemVersion,systemDeviceTypeFormattedNO,
                            systemDeviceTypeFormattedYES,screenWidth,
-                           screenHeight,screenBrightness,multitaskingEnabled,
-                           jailbroken,charging,fullyCharged,
+                           screenHeight,screenBrightness,multitaskingEnabled,charging,fullyCharged,
                            country,language,timeZone,
                            currency,applicationVersion,clipboardContent,
                            carrierName,carrierCountry,cellIPAddress,
@@ -123,13 +121,6 @@
 {
     return [VLocalization timeZone];
 }
-
-
-+ (BOOL)isJailbroken
-{
-    return ([VJailbreakCheck jailbroken] != NOTJAIL);
-}
-
 
 + (NSString *)deviceType
 {

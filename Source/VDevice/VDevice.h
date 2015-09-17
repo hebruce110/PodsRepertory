@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VJailbreakCheck.h"
 #import "VDiskInfo.h"
 #import "VMemoryInfo.h"
 #import "VLocalization.h"
@@ -34,7 +33,5 @@
 + (NSString *)language;
 
 + (NSString *)timeZone;
-
-+ (BOOL)isJailbroken;
 
 @end
