@@ -26,17 +26,30 @@ typedef enum {
     VMargin18 = 18,
     VMargin19 = 19,
     VMargin20 = 20,
+    VMargin21 = 21,
     VMargin22 = 22,
     VMargin24 = 24,
     VMargin25 = 25,
     VMargin26 = 26,
     VMargin28 = 28,
     VMargin30 = 30,
+    VMargin32 = 32,
+    VMargin35 = 35,
+    VMargin36 = 36,
     VMargin40 = 40,
+    VMargin42 = 42,
+    VMargin45 = 45,
+    VMargin50 = 50,
+    VMargin55 = 55,
     VMargin60 = 60,
+    VMargin65 = 65,
+    VMargin70 = 70,
+    VMargin75 = 75,
     VMargin80 = 80,
+    VMargin90 = 90,
     VMargin100 = 100
 }VMargin;
+
 
 
 //沙盒路径
