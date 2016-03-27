@@ -271,6 +271,24 @@
     return [self viewWithTag:[tag hash]];
 }
 
+- (void)animationShow
+{
+    [self animationShow:nil];
+}
+
+- (void)animationShow:(void (^)(BOOL finished))completion
+{
+    if (self.alpha < 1.0) {
+        [UIView animateWithDuration:0.3f
+                              delay:0.1
+                            options:UIViewAnimationOptionCurveEaseInOut
+                         animations:^{
+                             self.alpha = 1.0f;
+                         } completion:completion];
+    }
+}
+
+
 @end
 
 

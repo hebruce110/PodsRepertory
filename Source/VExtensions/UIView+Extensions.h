@@ -143,6 +143,10 @@
 //根据stringTag获取view
 -(UIView*)viewWithStringTag:(NSString*)tag;
 
+- (void)animationShow;
+
+- (void)animationShow:(void (^)(BOOL finished))completion;
+
 @end
 
 //用typedef定义DismissBlock和CancelBlock
