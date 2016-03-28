@@ -176,11 +176,6 @@ static inline NSNumber * FormatNumber(NSObject *obj,id replaceNumber)
 
 #define isIOS7 !SYSTEM_VERSION_LESS_THAN(@"7.0")
 
-//是否是iPhone
-#define isiPhone UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone
-
-#define isiPad  UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
-
 // 系统控件默认高度
 #define kStatusBarHeight        (20.f)
 
@@ -261,8 +256,11 @@ static inline NSNumber * FormatNumber(NSObject *obj,id replaceNumber)
                                                   [[UIScreen mainScreen] currentMode].size) : \
                                 NO)
 
-// 是否iPad
-#define isPad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+//是否是iPhone
+#define isiPhone UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone
+
+//是否是iPad
+#define isiPad  UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
 
 // UIView - viewWithTag
 #define VIEWWITHTAG(_OBJECT, _TAG)\
