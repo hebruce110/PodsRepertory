@@ -1,27 +1,24 @@
 //
-//  VPickImage.h
-//  Vote
+//  PPPickImage.h
+//  PatPat
 //
-//  Created by Yuan on 14-4-17.
-//  Copyright (c) 2014年 Yuan.He. All rights reserved.
+//  Created by patpat on 15/4/26.
+//  Copyright (c) 2015年 http://www.patpat.com. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 typedef void (^PickImageCallBackBlock)(UIImage *image,NSInteger index);
 
-@interface VPickImage : NSObject<UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIActionSheetDelegate>
+@interface VPickImage : NSObject<UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
-- (void)showActionSheet:(PickImageCallBackBlock)selectedImageBlock delegate:(UIViewController *)vc;
+- (void)showActionSheet:(PickImageCallBackBlock)selectedImageBlock
+               delegate:(UIViewController *)vc
+             sourceView:(UIView*)sourceView;
 
 - (void)showActionSheet:(PickImageCallBackBlock)selectedImageBlock
                  isEdit:(BOOL)edit
-               delegate:(UIViewController *)vc;
-
-- (void)showEditTimeLineTopImageActionSheet:(PickImageCallBackBlock)selectedImageBlock
-                                     isEdit:(BOOL)edit
-                                   delegate:(UIViewController *)vc;
-
-+ (VPickImage *)sharedVPickImage;
+               delegate:(UIViewController *)vc
+             sourceView:(UIView*)sourceView;
 
 @end

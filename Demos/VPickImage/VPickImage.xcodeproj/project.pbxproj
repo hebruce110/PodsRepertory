@@ -428,6 +428,7 @@
 				1C2A25431941988500F44F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C2A25441941988500F44F15 /* Build configuration list for PBXNativeTarget "VPickImageTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +437,7 @@
 				1C2A25461941988500F44F15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
