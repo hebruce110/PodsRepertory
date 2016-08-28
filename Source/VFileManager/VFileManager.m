@@ -75,6 +75,7 @@ static NSString * const kLogsFolder   = @"logs";
 
 + (void) addLog:(NSString *)strLog
 {
+#ifdef DEBUG
     // 取得正常操作修改的文件句柄
     NSFileHandle *fileHandler = [NSFileHandle fileHandleForUpdatingAtPath:[self logPath]];
     if (fileHandler) {
@@ -88,6 +89,7 @@ static NSString * const kLogsFolder   = @"logs";
         NSLog(@"write log error");
     }
     [fileHandler closeFile];
+#endif
 }
 
 
