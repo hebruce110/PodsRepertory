@@ -19,7 +19,7 @@ static NSString *_pathForMainBundleDirectory = nil;
 static NSString *_pathForTemporaryDirectory = nil;
 static NSString *_logPath = nil;
 
-static NSString * const kLogsFolder   = @"logs";
+static NSString * const kLogsFolder   = @".logs";
 
 //System log
 
